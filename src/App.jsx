@@ -1,10 +1,9 @@
-function App() {
+export default function App() {
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1>Vite + React is running 🚀</h1>
-      <p>AR Designs Website</p>
+    <div className="min-h-screen flex items-center justify-center bg-black">
+      <h1 className="text-4xl font-bold text-white">
+        Tailwind v4 is working 🚀
+      </h1>
     </div>
   );
 }
-
-export default App;
