@@ -1,1 +1,1 @@
-# Welcome to he development of AR Design Website
+# Welcome to the development of AR Design Website
