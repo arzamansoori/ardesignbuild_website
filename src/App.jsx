@@ -1,9 +1,12 @@
-export default function App() {
+import Header from "./components/Header";
+
+function App() {
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
-      <h1 className="text-4xl font-bold text-white">
-        Tailwind v4 is working 🚀
-      </h1>
+    <div className="bg-yellow">
+      <Header />
     </div>
-  );
+  )
 }
+
+export default App;
