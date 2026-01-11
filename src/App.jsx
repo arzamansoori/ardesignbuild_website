@@ -1,3 +1,4 @@
+import DesignPhilosophy from "./components/DesignPhilosophy";
 import Header from "./components/Header";
 import TopSection from "./components/TopSection";
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Header />
       <TopSection />
+      <DesignPhilosophy />
     </div>
   )
 }
