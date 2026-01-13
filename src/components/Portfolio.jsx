@@ -17,7 +17,7 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-10 mx-32">
+      <div className="flex justify-center flex-wrap gap-10">
         <div>
           <img src={LivingRoom1} alt="Living Room" className="w-96 h-60 rounded-lg object-cover"/>
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Modern Living Space</h2>

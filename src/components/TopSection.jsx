@@ -12,7 +12,7 @@ const TopSection = () => {
       </p>
 
       <div className="">
-        <button className="px-5 py-2 text-lg border rounded-lg mr-3 bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer">
+        <button className="px-5 py-2 text-lg border rounded-lg mr-6 bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer">
           View Portfolio
         </button>
         <button className="px-5 py-2 text-lg border rounded-lg bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer">

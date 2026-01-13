@@ -1,3 +1,4 @@
+import ClientReviews from "./components/ClientReviews";
 import DesignPhilosophy from "./components/DesignPhilosophy";
 import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
@@ -11,6 +12,7 @@ function App() {
       <TopSection />
       <DesignPhilosophy />
       <Portfolio />
+      <ClientReviews />
     </div>
   )
 }
