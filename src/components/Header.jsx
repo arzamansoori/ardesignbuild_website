@@ -1,7 +1,7 @@
 
 const Header = () => {
   return (
-    <>
+    <div className="">
     <div className="flex justify-between pt-10 pb-5 px-16 text-[#FFEFCD]">
       <div className="">
         <p className="font-bold text-2xl">ARDesign&Build</p>
@@ -16,7 +16,7 @@ const Header = () => {
     </div>
 
     <div className="border border-[#FFEFCD]/20"></div>
-    </>
+    </div>
   )
 }
 
