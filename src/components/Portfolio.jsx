@@ -8,7 +8,7 @@ import jewelleryshop from "../assets/jewelleryshop.png"
 
 const Portfolio = () => {
   return (
-    <div className="pt-40">
+    <div className="pt-40" id="portfolio">
       <div className="text-center pb-10">
         <h2 className="text-4xl font-bold mb-4 text-[#FFEFCD]">Our Portfolio</h2>
         <p className="text-[#A58E74] text-lg">

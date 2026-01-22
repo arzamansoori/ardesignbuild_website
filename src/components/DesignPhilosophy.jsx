@@ -3,7 +3,7 @@ import LivingRoom from "../assets/LivingRoom.png"
 
 const DesignPhilosophy = () => {
   return (
-    <div className="pt-40 px-10 flex justify-around items-center">
+    <div className="pt-40 px-10 flex justify-around items-center" id="DesignPhilosophy">
 
       <div>
         <p className="text-[#FFEFCD] pb-4 text-4xl font-bold">About Our Design

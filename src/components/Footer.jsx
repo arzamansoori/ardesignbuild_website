@@ -2,7 +2,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <>
+    <div id="Footer">
     <div className="pt-20 pb-10 flex gap-28 justify-center">
 
       <div>
@@ -53,7 +53,7 @@ const Footer = () => {
       <span><AiOutlineCopyright /></span>
       <p>2026 ARDesign&Build. All rights reserved.</p>
     </div>
-    </>
+    </div>
   )
 }
 
