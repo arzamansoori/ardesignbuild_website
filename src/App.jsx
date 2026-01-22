@@ -4,6 +4,7 @@ import ContactSection from "./components/ContactSection";
 import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
 import TopSection from "./components/TopSection";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Portfolio />
       <ClientReviews />
       <ContactSection />
+      <Footer />
     </div>
   )
 }
