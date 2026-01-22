@@ -35,9 +35,14 @@ const DesignPhilosophy = () => {
         </div>
       </div>
 
-      <div>
-        <img src={LivingRoom}   
-          className="w-125 rounded-lg"/>
+      <div className="overflow-hidden rounded-lg">
+        <img 
+          src={LivingRoom} 
+          alt="Living Room"
+          title="Living Room"  
+          className="w-125 rounded-lg object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+        />
+        
       </div>
 
     </div>

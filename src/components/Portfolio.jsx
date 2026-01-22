@@ -22,6 +22,7 @@ const Portfolio = () => {
           <img 
             src={LivingRoom1} 
             alt="Living Room" 
+            title="Living Room"
             className="w-96 h-60 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Modern Living Space</h2>
@@ -32,6 +33,7 @@ const Portfolio = () => {
           <img
             src={bedroom}
             alt="Bedroom"
+            title="Serene Bedroom"
             className="w-96 h-60 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Serene Bedroom</h2>
@@ -42,6 +44,7 @@ const Portfolio = () => {
           <img
             src={kitchen}
             alt="Kitchen"
+            title="Gourmet Kitchen"
             className="w-96 h-60 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Gourmet Kitchen</h2>
@@ -52,6 +55,7 @@ const Portfolio = () => {
           <img
             src={DiningRoom}
             alt="Dining Room"
+            title="Dining Room"
             className="w-96 h-60 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Dining Room</h2>
@@ -62,6 +66,7 @@ const Portfolio = () => {
           <img
             src={GuestBedroom}
             alt="Guest Bedroom"
+            title="Guest Bedroom"
             className="w-96 h-60 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Guest Room</h2>
@@ -72,6 +77,7 @@ const Portfolio = () => {
           <img
             src={jewelleryshop}
             alt="Jewellery Shop"
+            title="Jewellery Shop"
             className="w-96 h-60 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
           <h2 className="pt-3 pb-1 font-semibold text-lg text-[#FFEFCD]">Jewellery Shop</h2>
