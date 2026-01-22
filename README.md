@@ -60,13 +60,13 @@ src/
 > Add your website screenshots in a `screenshots` folder and update the paths below.
 
 ### Home Page
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/HomePage.png)
 
 ### Portfolio Section
-![Portfolio](./screenshots/portfolio.png)
+![Portfolio](./screenshots/Portfolio.png)
 
 ### Contact Section
-![Contact](./screenshots/contact.png)
+![Contact](./screenshots/ContactSection.png)
 
 ---
 
