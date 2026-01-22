@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa6";
 
 const ClientReviews = () => {
   return (
-    <div className="pt-40">
+    <div className="pt-40" id="reviews">
       <div className="text-center">
         <h1 className="text-4xl font-semibold pb-3 text-[#FFEFCD]">Client Reviews</h1>
         <p className="text-[#A58E74] text-lg">What our clients say about their experience with us</p>

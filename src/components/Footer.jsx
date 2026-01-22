@@ -2,7 +2,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <>
+    <div id="Footer">
     <div className="pt-20 pb-10 flex gap-28 justify-center">
 
       <div>
@@ -26,10 +26,10 @@ const Footer = () => {
       <div>
         <h3 className="text-[#FFEFCD] font-semibold text-md pb-2">Quick Links</h3>
         <ul className="text-[#A58E74] flex flex-col gap-2">
-          <li>Portfolio</li>
-          <li>About</li>
-          <li>Reviews</li>
-          <li>Contact</li>
+          <a href="#portfolio" className="hover:text-[#a18955]">Portfolio</a>
+          <a href="#about" className="hover:text-[#a18955]">About</a>
+          <a href="#reviews" className="hover:text-[#a18955]">Reviews</a>
+          <a href="#contact" className="hover:text-[#a18955]">Contact</a>
         </ul>
       </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
       <span><AiOutlineCopyright /></span>
       <p>2026 ARDesign&Build. All rights reserved.</p>
     </div>
-    </>
+    </div>
   )
 }
 

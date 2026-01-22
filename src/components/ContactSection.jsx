@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const ContactSection = () => {
   return (
-    <>
+    <div id="contact">
     <div className="pt-40 mb-20">
 
       <div className="text-center">
@@ -128,7 +128,7 @@ const ContactSection = () => {
     </div>
 
     <div className="border border-[#5b5e45]"></div>
-    </>
+    </div>
   )
 }
 

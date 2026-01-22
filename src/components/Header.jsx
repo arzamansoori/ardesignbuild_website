@@ -8,10 +8,10 @@ const Header = () => {
       </div>
 
       <div className="flex gap-7 text-lg">
-        <button>Home</button>
-        <button>Portfolio</button>
-        <button>Reviews</button>
-        <button>Contact</button>
+        <a href="#home" className="hover:text-[#A58E74]">Home</a>
+        <a href="#portfolio" className="hover:text-[#A58E74]">Portfolio</a>
+        <a href="#reviews" className="hover:text-[#A58E74]">Reviews</a>
+        <a href="#contact" className="hover:text-[#A58E74]">Contact</a>
       </div>
     </div>
 

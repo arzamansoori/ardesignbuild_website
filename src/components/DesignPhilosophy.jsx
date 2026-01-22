@@ -3,7 +3,7 @@ import LivingRoom from "../assets/LivingRoom.png"
 
 const DesignPhilosophy = () => {
   return (
-    <div className="pt-40 px-10 flex justify-around items-center">
+    <div className="pt-40 px-10 flex justify-around items-center" id="about">
 
       <div>
         <p className="text-[#FFEFCD] pb-4 text-4xl font-bold">About Our Design
@@ -35,9 +35,14 @@ const DesignPhilosophy = () => {
         </div>
       </div>
 
-      <div>
-        <img src={LivingRoom}   
-          className="w-125 rounded-lg"/>
+      <div className="overflow-hidden rounded-lg">
+        <img 
+          src={LivingRoom} 
+          alt="Living Room"
+          title="Living Room"  
+          className="w-125 rounded-lg object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+        />
+        
       </div>
 
     </div>

@@ -1,7 +1,7 @@
 
 const TopSection = () => {
   return (
-    <div className="text-center pt-40">
+    <div className="text-center pt-40" id="home">
       <p className="text-[#FFEFCD] text-6xl font-bold pb-5">Transforming Spaces 
         <br /> 
         <span className="text-[#E09132]">Into Dreams</span>
@@ -12,12 +12,22 @@ const TopSection = () => {
       </p>
 
       <div className="">
-        <button className="px-5 py-2 text-lg border rounded-lg mr-6 bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer">
+        <a
+          href="/ARStudio.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 text-lg border rounded-lg mr-6 bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer"
+        >
           View Portfolio
-        </button>
-        <button className="px-5 py-2 text-lg border rounded-lg bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer">
+        </a>
+
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=ardesignbuild03@gmail.com&su=Consultation Request&body=Hello AR Design & Build,%0D%0A%0D%0AI would like to book a consultation.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AProject Location:"
+          target="_blank"
+          className="px-5 py-2 text-lg border rounded-lg bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer inline-block"
+        >
           Get Consultation
-        </button>
+        </a>
       </div>
     </div>
   )
