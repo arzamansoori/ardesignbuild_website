@@ -47,9 +47,9 @@ This website is part of my freelance portfolio and represents real-world fronten
 
 ```
 src/
-├─ assets/ # Images
-├─ components/ # Header, Sections, Footer
-├─ pages/ # Home, Portfolio, Contact, Reviews
+├─ assets/ Images
+├─ components/ Header, Sections, Footer
+├─ pages/ Home, Portfolio, Contact, Reviews
 └─ main.jsx
 ```
 
