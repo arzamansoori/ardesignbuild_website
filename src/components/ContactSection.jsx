@@ -3,8 +3,39 @@ import { MdEmail } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    projectDetails: ""
+  })
+
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const to = "ardesignbuild03@gmail.com"
+    const subject = `New Project Inquiry from ${formData.name}`;
+    const body = `
+      Hi Arshi & Rashid,
+      
+      Project Details: ${formData.projectDetails}
+      
+      Thanks,
+      ${formData.name}`;
+
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+        to
+      )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      window.open(gmailLink, "_blank");
+    };
+
   return (
     <div id="contact">
     <div className="pt-40 mb-20">
@@ -83,13 +114,15 @@ const ContactSection = () => {
         {/* Message form */}
         <div className="border border-[#5b5e45] rounded-xl p-6 w-96">
           <h3 className="text-[#FFEFCD] text-2xl font-semibold pb-6">Send a Message</h3>
-          <form className="flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div>
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
                 className="border border-[#5b5e45] px-3 py-2 rounded-lg text-[#FFEFCD] w-full 
                   focus:outline-none focus:ring-0 focus:border-[#FFEFCD]"
                 required
@@ -101,6 +134,8 @@ const ContactSection = () => {
                 type="text"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Email"
                 className="border border-[#5b5e45] px-3 py-2 rounded-lg text-[#FFEFCD] w-full 
                   focus:outline-none focus:ring-0 focus:border-[#FFEFCD]"
@@ -113,6 +148,8 @@ const ContactSection = () => {
                 type="text"
                 id="projectDetails"
                 name="projectDetails"
+                value={formData.projectDetails}
+                onChange={handleChange}
                 placeholder="Tell us about your project..."
                 className="border border-[#5b5e45] px-3 py-2 rounded-lg text-[#FFEFCD] w-full 
                   focus:outline-none focus:ring-0 focus:border-[#FFEFCD]"
@@ -120,7 +157,11 @@ const ContactSection = () => {
               />
             </div>
 
-            <button className="px-2 py-2 bg-[#E09132] text-[#424530] font-medium rounded-lg cursor-pointer">Send Message</button>
+            <button 
+              type="submit"
+              className="px-2 py-2 bg-[#E09132] text-[#424530] font-medium rounded-lg cursor-pointer">
+                Send Message
+            </button>
           </form>
         </div>
       </div>
