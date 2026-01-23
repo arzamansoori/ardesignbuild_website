@@ -1,8 +1,8 @@
 # 📐 ARDesign&Build
 
-![React](https://img.shields.io/badge/React-18-blue?logo=react)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.x-38BDF8?logo=tailwindcss)
-![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?logo=vite)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.x-38BDF8?logo=tailwindcss)
+![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
 ---
@@ -47,9 +47,9 @@ This website is part of my freelance portfolio and represents real-world fronten
 
 ```
 src/
-├─ assets/ # Images, logos
+├─ assets/ # Images
 ├─ components/ # Header, Sections, Footer
-├─ pages/ # Home, Portfolio, Contact
+├─ pages/ # Home, Portfolio, Contact, Reviews
 └─ main.jsx
 ```
 
