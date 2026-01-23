@@ -21,13 +21,12 @@ const ContactSection = () => {
 
     const to = "ardesignbuild03@gmail.com"
     const subject = `New Project Inquiry from ${formData.name}`;
-    const body = `
-      Hi Arshi & Rashid,
+    const body = `Hi AR Design & Build Studio,
+    
+Project Details: ${formData.projectDetails}
       
-      Project Details: ${formData.projectDetails}
-      
-      Thanks,
-      ${formData.name}`;
+Thanks,
+${formData.name}`;
 
       const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
         to

@@ -22,8 +22,7 @@ const TopSection = () => {
         </a>
 
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=ardesignbuild03@gmail.com&su=Consultation Request&body=Hello AR Design & Build,%0D%0A%0D%0AI would like to book a consultation.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AProject Location:"
-          target="_blank"
+          href="#contact"
           className="px-5 py-2 text-lg border rounded-lg bg-[#E09132] text-[#424530] hover:bg-[#424530] hover:text-[#FFEFCD] font-semibold cursor-pointer inline-block"
         >
           Get Consultation
