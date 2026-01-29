@@ -3,7 +3,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 const Footer = () => {
   return (
     <div id="Footer">
-    <div className="pt-20 pb-10 flex gap-28 justify-center">
+    <div className="pt-20 pb-10 flex gap-28 justify-center flex-wrap">
 
       <div>
         <h3 className="text-[#FFEFCD] font-semibold text-xl pb-2">ARDesign&Build</h3>
