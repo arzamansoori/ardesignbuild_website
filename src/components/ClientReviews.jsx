@@ -8,7 +8,7 @@ const ClientReviews = () => {
         <p className="text-[#A58E74] text-lg">What our clients say about their experience with us</p>
       </div>
 
-      <div className="flex justify-center gap-10 mt-10 flex-wrap">
+      <div className="flex justify-center mx-4 lg:gap-10 gap-5 mt-10 flex-wrap">
         <div className="border border-[#5b5e45] p-6 rounded-lg w-80">
           <p className="flex gap-0.5 pb-2">
             <span className="text-[#E09132]"><FaStar /></span>
