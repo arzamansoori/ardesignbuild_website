@@ -3,18 +3,18 @@ import LivingRoom from "../assets/LivingRoom.png"
 
 const DesignPhilosophy = () => {
   return (
-    <div className="pt-25 md:pt-30 px-10 flex justify-around items-center flex-wrap" id="about">
+    <div className="pt-25 md:pt-30 px-10 flex justify-center xl:gap-50 gap-10 items-center flex-wrap" id="about">
 
-      <div>
+      <div className="max-w-96">
         <p className="text-[#FFEFCD] pb-6 lg:pb-4 text-5xl lg:text-4xl text-center lg:text-start font-bold">About Our Design
           <br /> Philosophy
         </p>
         <p className="text-[#A58E74] text-center lg:text-start lg:text-lg pb-4 text-base">
           With over a decade of experience in interior design, we 
-          <br />believe that every space should be a perfect blend of 
-          <br />aesthetics and functionality. Our approach focuses on 
-          <br />understanding your lifestyle, preferences, and needs to 
-          <br />create spaces that truly feel like home.
+          believe that every space should be a perfect blend of 
+          aesthetics and functionality. Our approach focuses on 
+          understanding your lifestyle, preferences, and needs to 
+          create spaces that truly feel like home.
         </p>
 
         <div className="">

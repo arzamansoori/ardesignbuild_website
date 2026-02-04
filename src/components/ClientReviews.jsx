@@ -18,7 +18,7 @@ const ClientReviews = () => {
             <span className="text-[#E09132]"><FaStar /></span>
           </p>
           <p className="pb-6 text-[#A58E74]">"Working with AR Design & build team was an absolute
-pleasure. From the initial consultation to the final reveal, their"
+pleasure. From the initial consultation to the final reveal, their team was professional, creative, and attentive to our needs."
           </p>
           
           <div>

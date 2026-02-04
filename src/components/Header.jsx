@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 z-50 bg-[#424530]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 pt-6 pb-4 flex justify-between items-center text-[#FFEFCD]">
+      <div className="mx-auto px-4 sm:px-6 lg:px-16 py-5 flex justify-between items-center text-[#FFEFCD]">
 
         <p className="font-bold text-xl sm:text-2xl">
           ARDesign&Build
