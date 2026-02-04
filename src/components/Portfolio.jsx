@@ -2,7 +2,7 @@ import { ImageDesc } from "../utils/constants"
 
 const Portfolio = () => {
   return (
-    <div className="pt-24 md:pt-32 px-8" id="portfolio">
+    <div className="pt-25 md:pt-32 px-8" id="portfolio">
       
       <div className="text-center pb-10 max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#FFEFCD]">

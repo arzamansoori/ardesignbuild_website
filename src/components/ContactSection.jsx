@@ -37,7 +37,7 @@ ${formData.name}`;
 
   return (
     <div id="contact">
-      <div className="pt-24 md:pt-32 mb-20">
+      <div className="pt-25 md:pt-32 mb-20">
 
         <div className="text-center">
           <h1 className="pb-2 text-4xl font-semibold text-[#FFEFCD]">Get In Touch</h1>

@@ -1,7 +1,7 @@
 
 const TopSection = () => {
   return (
-    <div className="text-center pt-25 md:pt-30" id="home">
+    <div className="text-center pt-25 md:pt-32" id="home">
       <p className="text-[#FFEFCD] lg:text-6xl text-5xl font-bold pb-5">Transforming Spaces 
         <br /> 
         <span className="text-[#E09132]">Into Dreams</span>

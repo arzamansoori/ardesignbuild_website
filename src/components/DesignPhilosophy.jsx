@@ -3,7 +3,7 @@ import LivingRoom from "../assets/LivingRoom.png"
 
 const DesignPhilosophy = () => {
   return (
-    <div className="pt-25 md:pt-30 px-10 flex justify-center xl:gap-50 gap-10 items-center flex-wrap" id="about">
+    <div className="pt-25 md:pt-32 px-10 flex justify-center xl:gap-50 gap-10 items-center flex-wrap" id="about">
 
       <div className="max-w-96">
         <p className="text-[#FFEFCD] pb-6 lg:pb-4 text-5xl lg:text-4xl text-center lg:text-start font-bold">About Our Design
