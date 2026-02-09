@@ -1,11 +1,12 @@
 import { FaStar } from "react-icons/fa6";
+import { BUSINESS_NAME } from "../utils/constants";
 
 const ClientReviews = () => {
   return (
     <div className="pt-25 md:pt-32" id="reviews">
       <div className="text-center">
         <h1 className="text-4xl font-semibold pb-3 text-[#FFEFCD]">Client Reviews</h1>
-        <p className="text-[#A58E74] text-lg">What our clients say about their experience with us</p>
+        <p className="text-[#A58E74] text-lg mx-4">What our clients say about their experience with us</p>
       </div>
 
       <div className="flex justify-center mx-4 lg:gap-10 gap-5 mt-10 flex-wrap">
@@ -17,7 +18,7 @@ const ClientReviews = () => {
             <span className="text-[#E09132]"><FaStar /></span>
             <span className="text-[#E09132]"><FaStar /></span>
           </p>
-          <p className="pb-6 text-[#A58E74]">"Working with AR Design & build team was an absolute
+          <p className="pb-6 text-[#A58E74]">"Working with {BUSINESS_NAME} team was an absolute
 pleasure. From the initial consultation to the final reveal, their team was professional, creative, and attentive to our needs."
           </p>
           
@@ -35,7 +36,7 @@ pleasure. From the initial consultation to the final reveal, their team was prof
             <span className="text-[#E09132]"><FaStar /></span>
             <span className="text-[#E09132]"><FaStar /></span>
           </p>
-          <p className="pb-6 text-[#A58E74]">"AR Design & build team provide us with the new designs and still try to fit them
+          <p className="pb-6 text-[#A58E74]">"{BUSINESS_NAME} team provide us with the new designs and still try to fit them
             in our budget and the project ended 
             on budget which alone speaks volume"
           </p>
@@ -54,7 +55,7 @@ pleasure. From the initial consultation to the final reveal, their team was prof
             <span className="text-[#E09132]"><FaStar /></span>
             <span className="text-[#E09132]"><FaStar /></span>
           </p>
-          <p className="pb-4 text-[#A58E74]">"The attention to detail and the quality of AR Design & build team
+          <p className="pb-4 text-[#A58E74]">"The attention to detail and the quality of {BUSINESS_NAME} team
             work exceeded our expectations. We highly recommend to anyone
             looking to elevate their showroom interiors"
           </p>

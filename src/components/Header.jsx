@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 
+import logo from "../assets/logo.png"
+import {BUSINESS_NAME} from "../utils/constants"
+
 const Header = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
   const menuRef = useRef(null);
@@ -26,9 +29,18 @@ const Header = () => {
     <div className="sticky top-0 z-50 bg-[#424530]">
       <div className="mx-auto px-4 sm:px-6 lg:px-16 py-5 flex justify-between items-center text-[#FFEFCD]">
 
-        <p className="font-bold text-xl sm:text-2xl">
-          ARDesign&Build
-        </p>
+        <div className="flex items-center gap-2">
+           <img
+              src={logo}
+              alt={BUSINESS_NAME}
+              title={BUSINESS_NAME}
+              className="w-10 rounded-full object-cover bg-[#FFEFCD]"
+            />
+
+            <p className="font-bold text-xl sm:text-2xl">
+              {BUSINESS_NAME}
+            </p>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-7 text-lg">

@@ -41,7 +41,7 @@ ${formData.name}`;
 
         <div className="text-center">
           <h1 className="pb-2 text-4xl font-semibold text-[#FFEFCD]">Get In Touch</h1>
-          <p className="text-lg text-[#A58E74]">Ready to transform your space? Let's discuss your vision</p>
+          <p className="text-lg text-[#A58E74] mx-3">Ready to transform your space? Let's discuss your vision</p>
         </div>
 
         <div className="mt-10 flex lg:gap-40 gap-10 justify-center flex-wrap-reverse mx-4">
@@ -80,7 +80,7 @@ ${formData.name}`;
                 </div>
                 <div>
                   <p className="text-[#FFEFCD]">Address</p>
-                  <p className="text-[#A58E74]">FM Ali's, Tolli Chowki,<br/> Hyderabad</p>
+                  <p className="text-[#A58E74]">Brindavan Colony, Gate 1, <br/> Toli Chowki, Hyderabad</p>
                 </div>
               </div>
 

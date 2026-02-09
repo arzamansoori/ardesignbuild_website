@@ -37,3 +37,5 @@ export const ImageDesc = [
     desc: "Timeless elegance crafted to shine",
   },
 ];
+
+export const BUSINESS_NAME = "AR Design & Build"
