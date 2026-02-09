@@ -3,7 +3,12 @@
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.x-38BDF8?logo=tailwindcss)
 ![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite)
-![Status](https://img.shields.io/badge/Status-Active-success)
+[![Live](https://img.shields.io/badge/Live-Website-success)](https://ardesignbuild.in/)
+
+## 🌐 Live Website
+
+🔗 https://ardesignbuild.in/
+
 
 ---
 
