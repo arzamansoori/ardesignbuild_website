@@ -1,9 +1,9 @@
-# 📐 ARDesign&Build
+# AR Design & Build
 
-![React](https://img.shields.io/badge/React-19-blue?logo=react)
+<!-- ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.x-38BDF8?logo=tailwindcss)
 ![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite)
-[![Live](https://img.shields.io/badge/Live-Website-success)](https://ardesignbuild.in/)
+[![Live](https://img.shields.io/badge/Live-Website-success)](https://ardesignbuild.in/) -->
 
 ## 🌐 Live Website
 
@@ -26,7 +26,6 @@ This website is part of my freelance portfolio and represents real-world fronten
 - Smooth transitions and micro-interactions  
 - Fully responsive across all devices  
 - Contact section with direct email integration  
-- Custom color palette and typography  
 
 ---
 
@@ -36,15 +35,6 @@ This website is part of my freelance portfolio and represents real-world fronten
 - **Tailwind CSS** – Utility-first styling  
 - **HTML5 & Modern CSS**  
 - **Google Fonts (Poppins)**  
-
----
-
-## 🎯 Project Goals
-
-- Showcase interior design projects in a professional layout  
-- Build a strong digital presence for a design & build studio  
-- Deliver a fast, responsive, and visually refined UI  
-- Follow real-world freelance workflow and structure  
 
 ---
 
@@ -61,8 +51,6 @@ src/
 ---
 
 ## 🖼 Screenshots
-
-> Add your website screenshots in a `screenshots` folder and update the paths below.
 
 ### Home Page
 ![Home Page](./screenshots/HomePage.png)
@@ -83,12 +71,4 @@ Install dependencies:
 npm install
 npm run dev
 ```
-
-## 👨‍💻 Author
-
-**Arza Mansoori**  
-Frontend Developer | Freelance Web Developer  
-
-- React • Tailwind CSS • UI Development  
-- Passion for clean UI, modern design, and smooth user experience  
 
