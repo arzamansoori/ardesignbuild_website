@@ -1,8 +1,8 @@
 import bedroom from "../assets/bedroom.png"
 import LivingRoom1 from "../assets/LivingRoom1.jpg"
-import kitchen from "../assets/kitchen.jpg"
+import kitchen from "../assets/kitchen.png"
 import DiningRoom from "../assets/DiningRoom.png"
-import GuestBedroom from "../assets/GuestBedroom.jpg"
+import resortInterior from "../assets/resortInteriors.png"
 import jewelleryshop from "../assets/jewelleryshop.png"
 
 export const ImageDesc = [
@@ -27,9 +27,9 @@ export const ImageDesc = [
     desc: "Sophisticated space for memorable gatherings",
   },
   {
-    img: GuestBedroom,
-    title: "Guest Room",
-    desc: "Comfortable retreat designed for restful stays",
+    img: resortInterior,
+    title: "Resort Interiors",
+    desc: "Luxurious sanctuary blending comfort, nature, and refined elegance",
   },
   {
     img: jewelleryshop,
