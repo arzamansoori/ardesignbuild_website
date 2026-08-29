@@ -25,6 +25,10 @@
     @apply hover:text-muted transition;
   }
 
+  .back-link {
+    @apply flex items-center gap-2 px-4 sm:px-6 lg:px-16 py-3 text-cream hover:text-muted transition;
+  }
+
   .img-hover-zoom {
     @apply object-cover transition-transform duration-300 ease-in-out hover:scale-105;
   }

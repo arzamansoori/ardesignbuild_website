@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaChevronLeft } from "react-icons/fa6";
 
 import logo from "../assets/logo.png"
 import {BUSINESS_NAME} from "../utils/constants"
 
-const Header = () => {
+const Header = ({ backLink }) => {
   const [openHamburger, setOpenHamburger] = useState(false);
   const menuRef = useRef(null);
 
@@ -74,6 +75,20 @@ const Header = () => {
       </div>
 
       <div className="border-t border-line"></div>
+
+      {backLink && (
+        <>
+          <Link
+            to={backLink.to}
+            className="back-link"
+          >
+            <FaChevronLeft />
+            <span>{backLink.label}</span>
+          </Link>
+
+          <div className="border-t border-line"></div>
+        </>
+      )}
     </div>
   );
 };
