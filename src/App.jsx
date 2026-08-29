@@ -3,6 +3,7 @@ import DesignPhilosophy from "./components/DesignPhilosophy";
 import ContactSection from "./components/ContactSection";
 import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
+import Projects from "./components/Projects";
 import TopSection from "./components/TopSection";
 import Footer from "./components/Footer";
 
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <TopSection />
       <DesignPhilosophy />
+      <Projects />
       <Portfolio />
       <ClientReviews />
       <ContactSection />

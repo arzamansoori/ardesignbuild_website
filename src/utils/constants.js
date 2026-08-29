@@ -38,4 +38,37 @@ export const ImageDesc = [
   },
 ];
 
+export const ProjectsDesc = [
+  {
+    img: DiningRoom,
+    title: "Lakeside Villa Renovation",
+    desc: "Full interior overhaul for a modern lakeside family home",
+  },
+  {
+    img: kitchen,
+    title: "Downtown Loft Kitchen",
+    desc: "Sleek open-concept kitchen for a contemporary city loft",
+  },
+  {
+    img: LivingRoom1,
+    title: "Hillside Retreat",
+    desc: "Warm, minimalist living spaces framed by natural light",
+  },
+  {
+    img: resortInterior,
+    title: "Coastal Resort Suites",
+    desc: "Boutique hospitality interiors inspired by the shoreline",
+  },
+  {
+    img: bedroom,
+    title: "Urban Master Suite",
+    desc: "Cozy, textured bedroom design for a downtown apartment",
+  },
+  {
+    img: jewelleryshop,
+    title: "Heritage Boutique Fit-Out",
+    desc: "Elegant retail interior blending tradition with modern flair",
+  },
+];
+
 export const BUSINESS_NAME = "AR Design & Build"

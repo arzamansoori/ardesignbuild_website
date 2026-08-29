@@ -1,22 +1,22 @@
-import { ImageDesc } from "../utils/constants"
+import { ProjectsDesc } from "../utils/constants"
 
-const Portfolio = () => {
+const Projects = () => {
   return (
-    <div className="section-top px-8" id="portfolio">
+    <div className="section-top px-8" id="projects">
 
       <div className="text-center pb-10 max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cream">
-          Our Portfolio
+          Our Projects
         </h2>
         <p className="text-muted text-base md:text-lg">
-          Explore our curated collection of interior design projects that showcase our
-          commitment to excellence and attention to detail.
+          A look at some of our recent design and build projects, delivered
+          with care from concept to completion.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        {ImageDesc.map((item, index) => (
+        {ProjectsDesc.map((item, index) => (
           <div key={index} className="overflow-hidden rounded-xl mt-4">
             <img
               src={item.img}
@@ -34,15 +34,8 @@ const Portfolio = () => {
         ))}
       </div>
 
-      {/* <div className="flex justify-center pt-12">
-        <button className="px-10 md:px-12 py-3 rounded-lg bg-accent
-          text-surface font-semibold hover:opacity-90 transition">
-          View Projects
-        </button>
-      </div> */}
-
     </div>
   )
 }
 
-export default Portfolio
+export default Projects

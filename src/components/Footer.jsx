@@ -12,13 +12,13 @@ const Footer = () => {
         src={logo}
         alt={BUSINESS_NAME}
         title={BUSINESS_NAME}
-        className="w-22 rounded-full object-cover bg-[#FFEFCD]"
+        className="w-22 rounded-full object-cover bg-cream"
       />
 
       <div>
-        <h3 className="text-[#FFEFCD] font-semibold text-xl pb-2">{BUSINESS_NAME}</h3>
-        
-        <p className="text-[#A58E74] text-sm">Creating beautiful spaces that
+        <h3 className="text-cream font-semibold text-xl pb-2">{BUSINESS_NAME}</h3>
+
+        <p className="text-muted text-sm">Creating beautiful spaces that
           <br />inspire and transform lives
           <br />through thoughtful design.
         </p>
@@ -26,8 +26,8 @@ const Footer = () => {
 
       <div className="flex md:gap-20 gap-10 md:flex-row flex-col">
         <div>
-          <h3 className="text-[#FFEFCD] font-semibold text-md pb-2">Services</h3>
-          <ul className="text-[#A58E74] flex flex-col gap-2 text-sm">
+          <h3 className="text-cream font-semibold text-md pb-2">Services</h3>
+          <ul className="text-muted flex flex-col gap-2 text-sm">
             <li>Residential Design</li>
             <li>Commercial Spaces</li>
             <li>Consultation</li>
@@ -36,18 +36,18 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-[#FFEFCD] font-semibold text-md pb-2">Quick Links</h3>
-          <ul className="text-[#A58E74] flex flex-col gap-2 text-sm">
-            <a href="#portfolio" className="hover:text-[#a18955]">Portfolio</a>
-            <a href="#about" className="hover:text-[#a18955]">About</a>
-            <a href="#reviews" className="hover:text-[#a18955]">Reviews</a>
-            <a href="#contact" className="hover:text-[#a18955]">Contact</a>
+          <h3 className="text-cream font-semibold text-md pb-2">Quick Links</h3>
+          <ul className="text-muted flex flex-col gap-2 text-sm">
+            <a href="#portfolio" className="hover:text-muted-hover">Portfolio</a>
+            <a href="#about" className="hover:text-muted-hover">About</a>
+            <a href="#reviews" className="hover:text-muted-hover">Reviews</a>
+            <a href="#contact" className="hover:text-muted-hover">Contact</a>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-[#FFEFCD] font-semibold text-md pb-2">Contact</h3>
-          <ul className="text-[#A58E74] flex flex-col gap-2 text-sm flex-wrap">
+          <h3 className="text-cream font-semibold text-md pb-2">Contact</h3>
+          <ul className="text-muted flex flex-col gap-2 text-sm flex-wrap">
             <li>+91-9036925738</li>
             <li>ardesignbuild03@gmail.com</li>
             <li>Brindavan Colony, <br/> Toli Chowki, Hyderabad
@@ -58,10 +58,10 @@ const Footer = () => {
 
     </div>
 
-    <div className="border-t border-[#5b5e45] my-4 mx-10"></div>
+    <div className="border-t border-line my-4 mx-10"></div>
 
     {/* copyright */}
-    <div className="flex items-center gap-1 justify-center text-[#A58E74] pb-10 pt-5">
+    <div className="flex items-center gap-1 justify-center text-muted pb-10 pt-5">
       <span><AiOutlineCopyright /></span>
       <p className="text-sm flex flex-wrap">2026 {BUSINESS_NAME}. All rights reserved.</p>
     </div>
