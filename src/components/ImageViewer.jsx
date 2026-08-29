@@ -28,7 +28,7 @@ const ImageViewer = ({ images, index, onClose }) => {
   const scrollToIndex = (i) => {
     const el = containerRef.current;
     if (!el) return;
-    const clamped = (i + images.length) % images.length;
+    const clamped = Math.max(0, Math.min(images.length - 1, i));
     el.scrollTo({ left: el.clientWidth * clamped, behavior: "smooth" });
   };
 
@@ -57,11 +57,12 @@ const ImageViewer = ({ images, index, onClose }) => {
       {images.length > 1 && (
         <button
           type="button"
+          disabled={activeIndex === 0}
           onClick={(e) => {
             e.stopPropagation();
             scrollToIndex(activeIndex - 1);
           }}
-          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition"
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-black/40"
           aria-label="Previous image"
         >
           <FaChevronLeft />
@@ -71,11 +72,12 @@ const ImageViewer = ({ images, index, onClose }) => {
       {images.length > 1 && (
         <button
           type="button"
+          disabled={activeIndex === images.length - 1}
           onClick={(e) => {
             e.stopPropagation();
             scrollToIndex(activeIndex + 1);
           }}
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-black/40"
           aria-label="Next image"
         >
           <FaChevronRight />
