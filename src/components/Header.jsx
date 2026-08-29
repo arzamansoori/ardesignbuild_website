@@ -29,9 +29,9 @@ const Header = ({ backLink }) => {
 
   return (
     <div className="sticky top-0 z-50 bg-surface">
-      <div className="mx-auto px-4 sm:px-6 lg:px-16 py-5 flex justify-between items-center text-cream">
+      <div className="mx-auto px-4 sm:px-6 lg:px-16 py-3 flex justify-between items-center text-cream">
 
-        <div className="flex items-center gap-2">
+        <Link to="/#home" className="flex items-center gap-2">
            <img
               src={logo}
               alt={BUSINESS_NAME}
@@ -42,7 +42,7 @@ const Header = ({ backLink }) => {
             <p className="font-bold text-xl sm:text-2xl">
               {BUSINESS_NAME}
             </p>
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-7 text-lg">
