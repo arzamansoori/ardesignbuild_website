@@ -51,3 +51,14 @@
     @apply p-3 rounded-full bg-accent cursor-pointer inline-flex items-center justify-center;
   }
 }
+
+@layer utilities {
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -74,12 +74,6 @@ const ProjectPage = () => {
           images={project.images}
           index={openIndex}
           onClose={() => setOpenIndex(null)}
-          onPrev={() =>
-            setOpenIndex((i) => (i - 1 + project.images.length) % project.images.length)
-          }
-          onNext={() =>
-            setOpenIndex((i) => (i + 1) % project.images.length)
-          }
         />
       )}
     </div>
