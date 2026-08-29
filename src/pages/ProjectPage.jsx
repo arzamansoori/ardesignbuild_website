@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ImageViewer from "../components/ImageViewer";
 import { ProjectGalleries } from "../utils/constants";
 
 const BACK_LINK = { to: "/#projects", label: "Projects" };
@@ -8,6 +10,14 @@ const BACK_LINK = { to: "/#projects", label: "Projects" };
 const ProjectPage = () => {
   const { slug } = useParams();
   const project = ProjectGalleries[slug];
+  const [openIndex, setOpenIndex] = useState(null);
+
+  useEffect(() => {
+    document.body.style.overflow = openIndex !== null ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openIndex]);
 
   if (!project) {
     return (
@@ -38,14 +48,18 @@ const ProjectPage = () => {
         <div className="max-w-3xl mx-auto flex flex-col gap-12">
           {project.images.map((item, index) => (
             <div key={index}>
-              <div className="overflow-hidden rounded-xl">
+              <button
+                type="button"
+                onClick={() => setOpenIndex(index)}
+                className="overflow-hidden rounded-xl block w-full cursor-pointer"
+              >
                 <img
                   src={item.img}
                   alt={`${project.title} ${index + 1}`}
                   title={project.title}
                   className="w-full h-72 sm:h-96 img-hover-zoom"
                 />
-              </div>
+              </button>
               <p className="text-muted text-sm pt-3 text-center">
                 {item.caption}
               </p>
@@ -54,6 +68,20 @@ const ProjectPage = () => {
         </div>
       </div>
       <Footer />
+
+      {openIndex !== null && (
+        <ImageViewer
+          images={project.images}
+          index={openIndex}
+          onClose={() => setOpenIndex(null)}
+          onPrev={() =>
+            setOpenIndex((i) => (i - 1 + project.images.length) % project.images.length)
+          }
+          onNext={() =>
+            setOpenIndex((i) => (i + 1) % project.images.length)
+          }
+        />
+      )}
     </div>
   );
 };
