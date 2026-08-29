@@ -1,4 +1,5 @@
 import { AiOutlineCopyright } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 import { BUSINESS_NAME } from "../utils/constants";
 import logo from "../assets/logo.png"
@@ -38,10 +39,10 @@ const Footer = () => {
         <div>
           <h3 className="text-cream font-semibold text-md pb-2">Quick Links</h3>
           <ul className="text-muted flex flex-col gap-2 text-sm">
-            <a href="#portfolio" className="hover:text-muted-hover">Portfolio</a>
-            <a href="#about" className="hover:text-muted-hover">About</a>
-            <a href="#reviews" className="hover:text-muted-hover">Reviews</a>
-            <a href="#contact" className="hover:text-muted-hover">Contact</a>
+            <Link to="/#portfolio" className="hover:text-muted-hover">Portfolio</Link>
+            <Link to="/#about" className="hover:text-muted-hover">About</Link>
+            <Link to="/#reviews" className="hover:text-muted-hover">Reviews</Link>
+            <Link to="/#contact" className="hover:text-muted-hover">Contact</Link>
           </ul>
         </div>
 

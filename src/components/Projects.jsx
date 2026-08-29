@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ProjectsDesc } from "../utils/constants"
 
 const Projects = () => {
@@ -17,7 +18,11 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
         {ProjectsDesc.map((item, index) => (
-          <div key={index} className="overflow-hidden rounded-xl mt-4">
+          <Link
+            key={index}
+            to={`/project/${item.slug}`}
+            className="overflow-hidden rounded-xl mt-4 block"
+          >
             <img
               src={item.img}
               alt={item.title}
@@ -30,7 +35,7 @@ const Projects = () => {
             <p className="text-muted text-sm">
               {item.desc}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
 

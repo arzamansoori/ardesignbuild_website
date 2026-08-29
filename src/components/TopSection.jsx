@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const TopSection = () => {
   return (
@@ -21,12 +22,12 @@ const TopSection = () => {
           View Portfolio
         </a>
 
-        <a
-          href="#contact"
+        <Link
+          to="/#contact"
           className="btn-primary inline-block"
         >
           Get Consultation
-        </a>
+        </Link>
       </div>
     </div>
   )

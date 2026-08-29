@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logo.png"
 import {BUSINESS_NAME} from "../utils/constants"
@@ -44,10 +45,10 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-7 text-lg">
-          <a href="#home" className="nav-link">Home</a>
-          <a href="#portfolio" className="nav-link">Portfolio</a>
-          <a href="#reviews" className="nav-link">Reviews</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <Link to="/#home" className="nav-link">Home</Link>
+          <Link to="/#portfolio" className="nav-link">Portfolio</Link>
+          <Link to="/#reviews" className="nav-link">Reviews</Link>
+          <Link to="/#contact" className="nav-link">Contact</Link>
         </div>
 
         {/* Mobile Menu */}
@@ -62,10 +63,10 @@ const Header = () => {
           {/* Dropdown */}
           {openHamburger && (
             <div className="absolute right-0 mt-3 w-40 bg-surface border border-line rounded-lg shadow-lg flex flex-col text-sm gap-4 p-4">
-              <a href="#home" onClick={handleClose} className="nav-link">Home</a>
-              <a href="#portfolio" onClick={handleClose} className="nav-link">Portfolio</a>
-              <a href="#reviews" onClick={handleClose} className="nav-link">Reviews</a>
-              <a href="#contact" onClick={handleClose} className="nav-link">Contact</a>
+              <Link to="/#home" onClick={handleClose} className="nav-link">Home</Link>
+              <Link to="/#portfolio" onClick={handleClose} className="nav-link">Portfolio</Link>
+              <Link to="/#reviews" onClick={handleClose} className="nav-link">Reviews</Link>
+              <Link to="/#contact" onClick={handleClose} className="nav-link">Contact</Link>
             </div>
           )}
         </div>

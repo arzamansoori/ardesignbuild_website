@@ -1,25 +1,17 @@
-import ClientReviews from "./components/ClientReviews";
-import DesignPhilosophy from "./components/DesignPhilosophy";
-import ContactSection from "./components/ContactSection";
-import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
-import Projects from "./components/Projects";
-import TopSection from "./components/TopSection";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ProjectPage from "./pages/ProjectPage";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
-
   return (
-    <div>
-      <Header />
-      <TopSection />
-      <DesignPhilosophy />
-      <Projects />
-      <Portfolio />
-      <ClientReviews />
-      <ContactSection />
-      <Footer />
-    </div>
+    <>
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:slug" element={<ProjectPage />} />
+      </Routes>
+    </>
   )
 }
 
