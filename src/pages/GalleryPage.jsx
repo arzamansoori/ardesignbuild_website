@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ImageViewer from "../components/ImageViewer";
+import { FaExpand } from "react-icons/fa6";
 import { galleryImages } from "../services/gallery";
 import useDocumentHead from "../hooks/useDocumentHead";
 import { BUSINESS_NAME } from "../utils/constants";
@@ -42,7 +43,7 @@ const GalleryPage = () => {
               key={index}
               type="button"
               onClick={() => setOpenIndex(index)}
-              className="overflow-hidden rounded-xl block cursor-pointer"
+              className="relative group overflow-hidden rounded-xl block cursor-pointer"
             >
               <img
                 src={item.img}
@@ -53,6 +54,12 @@ const GalleryPage = () => {
                 decoding="async"
                 className="w-full h-40 sm:h-48 img-hover-zoom"
               />
+              <span
+                className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"
+                aria-hidden="true"
+              >
+                <FaExpand className="text-xs" />
+              </span>
             </button>
           ))}
         </div>

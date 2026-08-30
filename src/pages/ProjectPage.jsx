@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ImageViewer from "../components/ImageViewer";
+import { FaExpand } from "react-icons/fa6";
 import * as projectsService from "../services/projects";
 import useDocumentHead from "../hooks/useDocumentHead";
 import { BUSINESS_NAME } from "../utils/constants";
@@ -71,7 +72,7 @@ const ProjectPage = () => {
               <button
                 type="button"
                 onClick={() => setOpenIndex(index)}
-                className="overflow-hidden rounded-xl block w-full cursor-pointer"
+                className="relative group overflow-hidden rounded-xl block w-full cursor-pointer"
               >
                 <img
                   src={item.img}
@@ -84,6 +85,12 @@ const ProjectPage = () => {
                   height={item.height}
                   className="w-full h-auto rounded-xl"
                 />
+                <span
+                  className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"
+                  aria-hidden="true"
+                >
+                  <FaExpand className="text-xs" />
+                </span>
               </button>
               <p className="text-muted text-sm pt-3 text-center">
                 {item.caption}
