@@ -19,7 +19,6 @@ For what it is — a freelance marketing site with no backend, no auth, no data 
 - **Zero tests.** No unit tests, no component tests, no e2e/visual tests, nothing in `package.json` beyond `dev`/`build`/`preview`. For a site with real user-facing logic (routing by slug, image carousel with keyboard nav, form submission), even a handful of smoke tests would catch the bugs above before they ship.
 - **No CI.** No `.github/workflows`, no pre-commit hook, no lint gate. Every commit goes straight to whatever branch with no automated check. Combined with commit messages like "more fixes" and "image carousel fixes" (see `git log`), this reads as an iterate-in-prod workflow.
 - **No linter or formatter configured** — no `.eslintrc`, no `eslint` dependency at all, no Prettier config. Vite's React template ships with ESLint by default; this project has actively removed or never had it. Code style is currently consistent only because one person is writing it by hand; that won't survive a second contributor.
-- **No error boundary** anywhere in the tree — a single render error (e.g., a malformed `ProjectGalleries` entry) takes down the whole page with a blank screen.
 
 ### Performance (the biggest engineering gap)
 
