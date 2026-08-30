@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import useDocumentHead from "../hooks/useDocumentHead";
+import { BUSINESS_NAME } from "../utils/constants";
 
 const NotFound = () => {
+  useDocumentHead({
+    title: `Page not found | ${BUSINESS_NAME}`,
+    description: "The page you're looking for doesn't exist.",
+    path: "/404",
+    noindex: true,
+  });
+
   return (
     <div>
       <Header />

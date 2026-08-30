@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ImageViewer from "../components/ImageViewer";
 import * as projectsService from "../services/projects";
+import useDocumentHead from "../hooks/useDocumentHead";
+import { BUSINESS_NAME } from "../utils/constants";
 
 const BACK_LINK = { to: "/#projects", label: "Projects" };
 
@@ -18,6 +20,13 @@ const ProjectPage = () => {
       document.body.style.overflow = "";
     };
   }, [openIndex]);
+
+  useDocumentHead({
+    title: project ? `${project.title} | ${BUSINESS_NAME}` : `Project not found | ${BUSINESS_NAME}`,
+    description: project ? project.desc : "We couldn't find the project you're looking for.",
+    path: `/project/${slug}`,
+    noindex: !project,
+  });
 
   if (!project) {
     return (

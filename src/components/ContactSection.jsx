@@ -4,7 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
-import { PHONE_NUMBER, EMAIL, INSTAGRAM_URL, BUSINESS_NAME } from "../utils/constants";
+import { PHONE_NUMBER, EMAIL, INSTAGRAM_URL, LINKEDIN_URL, BUSINESS_NAME } from "../utils/constants";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -100,7 +100,7 @@ ${formData.name}`;
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/arshi-farheen-mansoori-347486109/"
+                  href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"

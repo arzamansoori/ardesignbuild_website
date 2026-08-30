@@ -39,7 +39,9 @@ export const ImageDesc = [
 ];
 
 export const BUSINESS_NAME = "AR Design & Build"
+export const SITE_URL = "https://ardesignbuild.in"
 
 export const PHONE_NUMBER = "+91-9036925738"
 export const EMAIL = "ardesignbuild03@gmail.com"
 export const INSTAGRAM_URL = "https://www.instagram.com/ardesign_build03/"
+export const LINKEDIN_URL = "https://www.linkedin.com/company/ardesignbuildstudio/"
