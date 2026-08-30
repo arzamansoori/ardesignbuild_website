@@ -39,12 +39,12 @@
 
   .btn-primary {
     @apply px-5 py-2 text-lg border rounded-lg bg-accent text-surface
-      hover:bg-surface hover:text-cream font-semibold cursor-pointer;
+      hover:bg-surface hover:text-cream font-medium cursor-pointer;
   }
 
   .btn-secondary {
     @apply px-5 py-2 text-lg border border-line rounded-lg bg-transparent text-cream
-      hover:border-cream font-semibold cursor-pointer;
+      hover:border-cream cursor-pointer;
   }
 
   .input-field {
