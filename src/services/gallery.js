@@ -21,6 +21,7 @@ const deliveredImages = projects.flatMap((project) =>
     width: image.width,
     height: image.height,
     caption: image.caption,
+    delivered: true,
   }))
 );
 
@@ -32,6 +33,7 @@ const deliveredVideos = projects.flatMap((project) =>
           width: project.delivered.video.width,
           height: project.delivered.video.height,
           caption: project.delivered.video.caption,
+          delivered: true,
         },
       ]
     : []

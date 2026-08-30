@@ -37,7 +37,7 @@ const GalleryPage = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {galleryMedia.map((item, index) => (
             <button
               key={index}
@@ -51,7 +51,7 @@ const GalleryPage = () => {
                   muted
                   playsInline
                   preload="metadata"
-                  className="w-full h-40 sm:h-48 object-cover img-hover-zoom"
+                  className="w-full h-48 sm:h-56 object-cover img-hover-zoom"
                 />
               ) : (
                 <img
@@ -61,8 +61,13 @@ const GalleryPage = () => {
                   loading={index < 8 ? "eager" : "lazy"}
                   fetchPriority={index === 0 ? "high" : "low"}
                   decoding="async"
-                  className="w-full h-40 sm:h-48 img-hover-zoom"
+                  className="w-full h-48 sm:h-56 img-hover-zoom"
                 />
+              )}
+              {item.delivered && (
+                <span className="badge absolute top-2 left-2">
+                  SITE PHOTO
+                </span>
               )}
               <span
                 className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"

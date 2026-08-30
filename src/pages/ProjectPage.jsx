@@ -66,9 +66,7 @@ const ProjectPage = () => {
           <h1 className="heading-section flex items-center justify-center gap-3">
             {project.title}
             {project.upcoming && (
-              <span className="bg-accent text-surface text-xs font-semibold px-2 py-1 rounded-md align-middle">
-                UPCOMING
-              </span>
+              <span className="badge align-middle">UPCOMING</span>
             )}
           </h1>
           <p className="text-muted text-base md:text-lg">{project.desc}</p>
@@ -185,6 +183,9 @@ const ProjectPage = () => {
                       height={item.height}
                       className="w-full h-auto rounded-xl"
                     />
+                    <span className="badge absolute top-2 left-2">
+                      SITE PHOTO
+                    </span>
                     <span
                       className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"
                       aria-hidden="true"
