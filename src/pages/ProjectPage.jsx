@@ -71,6 +71,11 @@ const ProjectPage = () => {
                   src={item.img}
                   alt={`${project.title} ${index + 1}`}
                   title={project.title}
+                  loading="eager"
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  decoding="async"
+                  width={item.width}
+                  height={item.height}
                   className="w-full h-auto rounded-xl"
                 />
               </button>

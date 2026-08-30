@@ -1,5 +1,5 @@
 import { FaCheck } from "react-icons/fa6";
-import LivingRoom from "../assets/LivingRoom.png"
+import LivingRoom from "../assets/LivingRoom.jpg"
 
 const DesignPhilosophy = () => {
   return (
@@ -40,6 +40,11 @@ const DesignPhilosophy = () => {
           src={LivingRoom}
           alt="Living Room"
           title="Living Room"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          width="1536"
+          height="1024"
           className="w-125 pt-6 rounded-lg img-hover-zoom"
         />
 

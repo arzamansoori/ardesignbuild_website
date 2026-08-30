@@ -22,6 +22,9 @@ const Portfolio = () => {
               src={item.img}
               alt={item.title}
               title={item.title}
+              loading="eager"
+              fetchPriority="low"
+              decoding="async"
               className="w-full h-56 sm:h-60 img-hover-zoom"
             />
             <h2 className="pt-3 pb-1 font-semibold text-lg text-cream">

@@ -106,6 +106,9 @@ const ImageViewer = ({ images, index, onClose }) => {
             <img
               src={item.img}
               alt={item.caption}
+              loading="eager"
+              fetchPriority={i === activeIndex ? "high" : "low"}
+              decoding="async"
               onClick={(e) => e.stopPropagation()}
               className="max-h-[70vh] w-auto max-w-full object-contain rounded-lg"
             />

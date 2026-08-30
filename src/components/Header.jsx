@@ -36,6 +36,11 @@ const Header = ({ backLink }) => {
               src={logo}
               alt={BUSINESS_NAME}
               title={BUSINESS_NAME}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="40"
+              height="40"
               className="w-10 rounded-full object-cover bg-cream"
             />
 

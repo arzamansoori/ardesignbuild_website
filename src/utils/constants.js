@@ -1,9 +1,9 @@
 import bedroom from "../assets/bedroom.png"
 import LivingRoom1 from "../assets/LivingRoom1.jpg"
-import kitchen from "../assets/kitchen.png"
-import DiningRoom from "../assets/DiningRoom.png"
-import resortInterior from "../assets/resortInteriors.png"
-import jewelleryshop from "../assets/jewelleryshop.png"
+import kitchen from "../assets/kitchen.jpg"
+import DiningRoom from "../assets/DiningRoom.jpg"
+import resortInterior from "../assets/resortInteriors.jpg"
+import jewelleryshop from "../assets/jewelleryshop.jpg"
 
 export const ImageDesc = [
   {

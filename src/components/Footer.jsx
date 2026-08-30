@@ -14,6 +14,11 @@ const Footer = () => {
         src={logo}
         alt={BUSINESS_NAME}
         title={BUSINESS_NAME}
+        loading="eager"
+        fetchPriority="low"
+        decoding="async"
+        width="88"
+        height="88"
         className="w-22 rounded-full object-cover bg-cream"
       />
 
