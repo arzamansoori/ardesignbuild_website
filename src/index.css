@@ -1,13 +1,76 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 @import "tailwindcss";
+
+@theme {
+  --color-cream: #ffefcd;
+  --color-muted: #a58e74;
+  --color-muted-hover: #a18955;
+  --color-accent: #e09132;
+  --color-surface: #424530;
+  --color-line: #5b5e45;
+}
 
 @layer base {
   body {
-    @apply bg-[#424530];
-    font-family: 'Poppins', sans-serif;
+    @apply bg-surface;
+    font-family: "Poppins", sans-serif;
   }
 }
 
+@utility container-x {
+  @apply px-4 sm:px-6 lg:px-16;
+}
+
+@layer components {
+  .section-top {
+    @apply pt-25 md:pt-32;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-cream;
+  }
+
+  .nav-link {
+    @apply hover:text-muted transition;
+  }
+
+  .back-link {
+    @apply container-x flex items-center gap-2 py-3 text-cream hover:text-muted transition;
+  }
+
+  .img-hover-zoom {
+    @apply object-cover transition-transform duration-300 ease-in-out hover:scale-105;
+  }
+
+  .card {
+    @apply border border-line rounded-lg p-6;
+  }
+
+  .btn-primary {
+    @apply px-5 py-2 text-lg border rounded-lg bg-accent text-surface
+      hover:bg-surface hover:text-cream font-medium cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply px-5 py-2 text-lg border border-line rounded-lg bg-transparent text-cream
+      hover:border-cream cursor-pointer;
+  }
+
+  .social-icon {
+    @apply p-3 rounded-full bg-accent cursor-pointer inline-flex items-center justify-center;
+  }
+
+  .viewer-nav-btn {
+    @apply absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center size-8 sm:size-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,24 +1,23 @@
-import ClientReviews from "./components/ClientReviews";
-import DesignPhilosophy from "./components/DesignPhilosophy";
-import ContactSection from "./components/ContactSection";
-import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
-import TopSection from "./components/TopSection";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ProjectPage from "./pages/ProjectPage";
+import GalleryPage from "./pages/GalleryPage";
+import NotFound from "./pages/NotFound";
+import ScrollToHash from "./components/ScrollToHash";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
-
   return (
-    <div>
-      <Header />
-      <TopSection />
-      <DesignPhilosophy />
-      <Portfolio />
-      <ClientReviews />
-      <ContactSection />
-      <Footer />
-    </div>
-  )
+    <ErrorBoundary>
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/project/:slug" element={<ProjectPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ErrorBoundary>
+  );
 }
 
 export default App;

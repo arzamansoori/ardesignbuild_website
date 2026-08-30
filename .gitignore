@@ -4,6 +4,9 @@ node_modules/
 # production build
 dist/
 
+# generated at build time (see scripts/generate-sitemap.js)
+public/sitemap.xml
+
 # local env files
 .env
 .env.local

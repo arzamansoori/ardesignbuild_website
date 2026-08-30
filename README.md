@@ -9,7 +9,6 @@
 
 🔗 https://ardesignbuild.in/
 
-
 ---
 
 **ARDesign&Build** is a premium, responsive freelance website developed for an interior design & construction brand.  
@@ -21,20 +20,20 @@ This website is part of my freelance portfolio and represents real-world fronten
 
 ## ✨ Features
 
-- Premium landing page layout  
-- Portfolio grid with hover animations  
-- Smooth transitions and micro-interactions  
-- Fully responsive across all devices  
-- Contact section with direct email integration  
+- Premium landing page layout
+- Portfolio grid with hover animations
+- Smooth transitions and micro-interactions
+- Fully responsive across all devices
+- Contact section with direct email integration
 
 ---
 
 ## 🛠 Tech Stack
 
-- **React (Vite)** – Fast development and build  
-- **Tailwind CSS** – Utility-first styling  
-- **HTML5 & Modern CSS**  
-- **Google Fonts (Poppins)**  
+- **React (Vite)** – Fast development and build
+- **Tailwind CSS** – Utility-first styling
+- **HTML5 & Modern CSS**
+- **Google Fonts (Poppins)**
 
 ---
 
@@ -53,12 +52,15 @@ src/
 ## 🖼 Screenshots
 
 ### Home Page
+
 ![Home Page](./screenshots/HomePage.png)
 
 ### Portfolio Section
+
 ![Portfolio](./screenshots/Portfolio.png)
 
 ### Contact Section
+
 ![Contact](./screenshots/ContactSection.png)
 
 ---
@@ -71,4 +73,3 @@ Install dependencies:
 npm install
 npm run dev
 ```
-

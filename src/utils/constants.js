@@ -1,9 +1,9 @@
-import bedroom from "../assets/bedroom.png"
-import LivingRoom1 from "../assets/LivingRoom1.jpg"
-import kitchen from "../assets/kitchen.png"
-import DiningRoom from "../assets/DiningRoom.png"
-import resortInterior from "../assets/resortInteriors.png"
-import jewelleryshop from "../assets/jewelleryshop.png"
+import bedroom from "../assets/bedroom.png";
+import LivingRoom1 from "../assets/LivingRoom1.jpg";
+import kitchen from "../assets/kitchen.jpg";
+import DiningRoom from "../assets/DiningRoom.jpg";
+import resortInterior from "../assets/resortInteriors.jpg";
+import jewelleryshop from "../assets/jewelleryshop.jpg";
 
 export const ImageDesc = [
   {
@@ -38,4 +38,14 @@ export const ImageDesc = [
   },
 ];
 
-export const BUSINESS_NAME = "AR Design & Build"
+export const BUSINESS_NAME = "AR Design & Build";
+export const SITE_URL = "https://ardesignbuild.in";
+
+export const PHONE_NUMBER = "+91-9036925738";
+export const WHATSAPP_NUMBER = "919036925738";
+export const WHATSAPP_MESSAGE = "Hi, I'd like to discuss a project.";
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+export const EMAIL = "ardesignbuild03@gmail.com";
+export const INSTAGRAM_URL = "https://www.instagram.com/ardesign_build03/";
+export const LINKEDIN_URL =
+  "https://www.linkedin.com/company/ardesignbuildstudio/";
