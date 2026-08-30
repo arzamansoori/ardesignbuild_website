@@ -57,7 +57,7 @@ const ProjectPage = () => {
                   src={item.img}
                   alt={`${project.title} ${index + 1}`}
                   title={project.title}
-                  className="w-full h-72 sm:h-96 img-hover-zoom"
+                  className="w-full h-auto rounded-xl"
                 />
               </button>
               <p className="text-muted text-sm pt-3 text-center">
