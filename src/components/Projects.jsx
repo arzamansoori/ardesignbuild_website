@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaChevronRight } from "react-icons/fa6";
 import * as projectsService from "../services/projects"
 
 const Projects = () => {
@@ -42,6 +43,9 @@ const Projects = () => {
             </h2>
             <p className="text-muted text-sm">
               {item.desc}
+            </p>
+            <p className="text-accent text-sm font-semibold pt-2 flex items-center gap-1.5">
+              View Project <FaChevronRight className="text-xs" />
             </p>
           </Link>
         ))}
