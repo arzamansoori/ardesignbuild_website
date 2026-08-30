@@ -16,7 +16,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
         {projectsService.projectsSummary.map((item, index) => (
           <Link
@@ -31,7 +31,7 @@ const Projects = () => {
               loading="eager"
               fetchPriority="low"
               decoding="async"
-              className="w-full h-56 sm:h-60 img-hover-zoom"
+              className="w-full h-56 sm:h-60 rounded-xl img-hover-zoom"
             />
             <h2 className="pt-3 pb-1 font-semibold text-lg text-cream flex items-center gap-2">
               {item.title}
