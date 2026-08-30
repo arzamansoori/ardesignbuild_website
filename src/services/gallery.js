@@ -15,6 +15,36 @@ const projectImages = projects.flatMap((project) =>
   }))
 );
 
+const deliveredImages = projects.flatMap((project) =>
+  (project.delivered?.images ?? []).map((image) => ({
+    img: image.img,
+    width: image.width,
+    height: image.height,
+    caption: image.caption,
+    delivered: true,
+  }))
+);
+
+const deliveredVideos = projects.flatMap((project) =>
+  project.delivered?.video
+    ? [
+        {
+          video: project.delivered.video.src,
+          width: project.delivered.video.width,
+          height: project.delivered.video.height,
+          caption: project.delivered.video.caption,
+          delivered: true,
+        },
+      ]
+    : []
+);
+
 export const galleryImages = [...portfolioImages, ...projectImages];
+
+export const galleryMedia = [
+  ...galleryImages,
+  ...deliveredImages,
+  ...deliveredVideos,
+];
 
 export default galleryImages;

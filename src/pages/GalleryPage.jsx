@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ImageViewer from "../components/ImageViewer";
-import { FaExpand } from "react-icons/fa6";
-import { galleryImages } from "../services/gallery";
+import { FaExpand, FaPlay } from "react-icons/fa6";
+import { galleryMedia } from "../services/gallery";
 import useDocumentHead from "../hooks/useDocumentHead";
 import { BUSINESS_NAME } from "../utils/constants";
 
@@ -37,28 +37,47 @@ const GalleryPage = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {galleryImages.map((item, index) => (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {galleryMedia.map((item, index) => (
             <button
               key={index}
               type="button"
               onClick={() => setOpenIndex(index)}
               className="relative group overflow-hidden rounded-xl block cursor-pointer"
             >
-              <img
-                src={item.img}
-                alt={item.caption}
-                title={item.caption}
-                loading={index < 8 ? "eager" : "lazy"}
-                fetchPriority={index === 0 ? "high" : "low"}
-                decoding="async"
-                className="w-full h-40 sm:h-48 img-hover-zoom"
-              />
+              {item.video ? (
+                <video
+                  src={item.video}
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-48 sm:h-56 object-cover img-hover-zoom"
+                />
+              ) : (
+                <img
+                  src={item.img}
+                  alt={item.caption}
+                  title={item.caption}
+                  loading={index < 8 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  decoding="async"
+                  className="w-full h-48 sm:h-56 img-hover-zoom"
+                />
+              )}
+              {item.delivered && (
+                <span className="badge absolute top-2 left-2">
+                  SITE PHOTO
+                </span>
+              )}
               <span
                 className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"
                 aria-hidden="true"
               >
-                <FaExpand className="text-xs" />
+                {item.video ? (
+                  <FaPlay className="text-xs" />
+                ) : (
+                  <FaExpand className="text-xs" />
+                )}
               </span>
             </button>
           ))}
@@ -68,7 +87,7 @@ const GalleryPage = () => {
 
       {openIndex !== null && (
         <ImageViewer
-          images={galleryImages}
+          images={galleryMedia}
           index={openIndex}
           onClose={() => setOpenIndex(null)}
         />

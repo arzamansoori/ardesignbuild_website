@@ -38,6 +38,11 @@ export const ImageDesc = [
   },
 ];
 
+export const PROJECT_TABS = {
+  MOCKUPS: "mockups",
+  DELIVERED: "delivered",
+};
+
 export const BUSINESS_NAME = "AR Design & Build";
 export const SITE_URL = "https://ardesignbuild.in";
 

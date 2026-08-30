@@ -103,15 +103,26 @@ const ImageViewer = ({ images, index, onClose }) => {
             key={i}
             className="w-full h-full shrink-0 snap-center flex items-center justify-center px-3 sm:px-16 md:px-24"
           >
-            <img
-              src={item.img}
-              alt={item.caption}
-              loading="eager"
-              fetchPriority={i === activeIndex ? "high" : "low"}
-              decoding="async"
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-[70vh] md:max-h-[85vh] w-auto max-w-full object-contain rounded-lg"
-            />
+            {item.video ? (
+              <video
+                src={item.video}
+                controls
+                playsInline
+                preload={i === activeIndex ? "auto" : "metadata"}
+                onClick={(e) => e.stopPropagation()}
+                className="max-h-[70vh] md:max-h-[85vh] w-auto max-w-full object-contain rounded-lg"
+              />
+            ) : (
+              <img
+                src={item.img}
+                alt={item.caption}
+                loading="eager"
+                fetchPriority={i === activeIndex ? "high" : "low"}
+                decoding="async"
+                onClick={(e) => e.stopPropagation()}
+                className="max-h-[70vh] md:max-h-[85vh] w-auto max-w-full object-contain rounded-lg"
+              />
+            )}
           </div>
         ))}
       </div>
