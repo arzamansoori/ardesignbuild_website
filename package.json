@@ -29,7 +29,6 @@
   "homepage": "https://github.com/arzamansoori/ardesignbuild_website#readme",
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/vite": "^4.1.18",
     "@vitejs/plugin-react": "^5.1.2",
