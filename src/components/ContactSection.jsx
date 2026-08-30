@@ -94,7 +94,7 @@ const ContactSection = () => {
                 <div>
                   <p className="text-cream">Address</p>
                   <p className="text-muted">
-                    Brindavan Colony, Gate 1, <br /> Toli Chowki, Hyderabad
+                    Brindavan Colony, Gate 1, <br /> Shaikpet, Hyderabad
                   </p>
                 </div>
               </div>

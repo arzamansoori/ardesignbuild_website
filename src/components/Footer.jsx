@@ -76,7 +76,7 @@ const Footer = () => {
               <li>{PHONE_NUMBER}</li>
               <li>{EMAIL}</li>
               <li>
-                Brindavan Colony, <br /> Toli Chowki, Hyderabad
+                Brindavan Colony, <br /> Shaikpet, Hyderabad
               </li>
             </ul>
           </div>
