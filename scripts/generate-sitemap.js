@@ -16,6 +16,7 @@ const slugs = [...projectsSource.matchAll(/^\s*id:\s*"([^"]+)"/gm)].map((match) 
 
 const urls = [
   { loc: `${SITE_URL}/`, priority: "1.0" },
+  { loc: `${SITE_URL}/gallery`, priority: "0.8" },
   ...slugs.map((slug) => ({ loc: `${SITE_URL}/project/${slug}`, priority: "0.8" })),
 ];
 

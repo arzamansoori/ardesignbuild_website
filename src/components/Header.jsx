@@ -52,8 +52,9 @@ const Header = ({ backLink }) => {
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-7 text-lg">
           <Link to="/#home" className="nav-link">Home</Link>
-          <Link to="/#portfolio" className="nav-link">Portfolio</Link>
+          <Link to="/#about" className="nav-link">About</Link>
           <Link to="/#projects" className="nav-link">Projects</Link>
+          <Link to="/#gallery" className="nav-link">Gallery</Link>
           <Link to="/#reviews" className="nav-link">Reviews</Link>
           <Link to="/#contact" className="nav-link">Contact</Link>
         </div>
@@ -71,8 +72,9 @@ const Header = ({ backLink }) => {
           {openHamburger && (
             <div className="absolute right-0 mt-3 w-40 bg-surface border border-line rounded-lg shadow-lg flex flex-col text-sm gap-4 p-4">
               <Link to="/#home" onClick={handleClose} className="nav-link">Home</Link>
-              <Link to="/#portfolio" onClick={handleClose} className="nav-link">Portfolio</Link>
+              <Link to="/#about" onClick={handleClose} className="nav-link">About</Link>
               <Link to="/#projects" onClick={handleClose} className="nav-link">Projects</Link>
+              <Link to="/#gallery" onClick={handleClose} className="nav-link">Gallery</Link>
               <Link to="/#reviews" onClick={handleClose} className="nav-link">Reviews</Link>
               <Link to="/#contact" onClick={handleClose} className="nav-link">Contact</Link>
             </div>
