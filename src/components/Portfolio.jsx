@@ -36,14 +36,6 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-
-      {/* <div className="flex justify-center pt-12">
-        <button className="px-10 md:px-12 py-3 rounded-lg bg-accent
-          text-surface font-semibold hover:opacity-90 transition">
-          View Projects
-        </button>
-      </div> */}
-
     </div>
   )
 }
