@@ -5,7 +5,6 @@ import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import Projects from "../components/Projects";
 import TopSection from "../components/TopSection";
-import InstagramHighlight from "../components/InstagramHighlight";
 import Footer from "../components/Footer";
 import useDocumentHead from "../hooks/useDocumentHead";
 import { BUSINESS_NAME } from "../utils/constants";
@@ -24,7 +23,6 @@ const Home = () => {
       <DesignPhilosophy />
       <Projects />
       <Gallery />
-      <InstagramHighlight />
       <ClientReviews />
       <ContactSection />
       <Footer />

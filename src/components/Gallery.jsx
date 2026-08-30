@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
 import { galleryImages } from "../services/gallery";
+import VideoPlayer from "./VideoPlayer";
+import instaAd1 from "../assets/insta-ad-1.mp4";
 
 const PREVIEW_COUNT = 6;
 
@@ -18,6 +20,8 @@ const Gallery = () => {
           A glimpse into the spaces we've designed and built.
         </p>
       </div>
+
+      <VideoPlayer src={instaAd1} className="mx-auto mb-8 max-w-sm" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {previewImages.map((item, index) => (
