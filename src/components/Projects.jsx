@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ProjectsDesc } from "../utils/constants"
+import * as projectsService from "../services/projects"
 
 const Projects = () => {
   return (
@@ -17,7 +17,7 @@ const Projects = () => {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        {ProjectsDesc.map((item, index) => (
+        {projectsService.projectsSummary.map((item, index) => (
           <Link
             key={index}
             to={`/project/${item.slug}`}

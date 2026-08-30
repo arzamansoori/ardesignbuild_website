@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ImageViewer from "../components/ImageViewer";
-import { ProjectGalleries } from "../utils/constants";
+import * as projectsService from "../services/projects";
 
 const BACK_LINK = { to: "/#projects", label: "Projects" };
 
 const ProjectPage = () => {
   const { slug } = useParams();
-  const project = ProjectGalleries[slug];
+  const project = projectsService.projectsById[slug];
   const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {

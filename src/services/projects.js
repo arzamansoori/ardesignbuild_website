@@ -135,4 +135,11 @@ export const projects = [
 
 export const projectsById = Object.fromEntries(projects.map((project) => [project.id, project]));
 
+export const projectsSummary = projects.map((project) => ({
+  slug: project.id,
+  img: project.images[0].img,
+  title: project.title,
+  desc: project.desc,
+}));
+
 export default projects;
