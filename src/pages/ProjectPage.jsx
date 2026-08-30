@@ -138,7 +138,7 @@ const ProjectPage = () => {
                     <FaExpand className="text-xs" />
                   </span>
                 </button>
-                <p className="text-muted text-sm pt-3 text-center">
+                <p className="text-cream text-sm pt-3 text-center">
                   {item.caption}
                 </p>
               </div>
@@ -160,7 +160,7 @@ const ProjectPage = () => {
                     preload="metadata"
                     className="w-full h-auto rounded-xl"
                   />
-                  <p className="text-muted text-sm pt-3 text-center">
+                  <p className="text-cream text-sm pt-3 text-center">
                     {project.delivered.video.caption}
                   </p>
                 </div>
@@ -193,7 +193,7 @@ const ProjectPage = () => {
                       <FaExpand className="text-xs" />
                     </span>
                   </button>
-                  <p className="text-muted text-sm pt-3 text-center">
+                  <p className="text-cream text-sm pt-3 text-center">
                     {item.caption}
                   </p>
                 </div>
