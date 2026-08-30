@@ -16,6 +16,10 @@
   }
 }
 
+@utility container-x {
+  @apply px-4 sm:px-6 lg:px-16;
+}
+
 @layer components {
   .section-top {
     @apply pt-25 md:pt-32;
@@ -26,7 +30,7 @@
   }
 
   .back-link {
-    @apply flex items-center gap-2 px-4 sm:px-6 lg:px-16 py-3 text-cream hover:text-muted transition;
+    @apply container-x flex items-center gap-2 py-3 text-cream hover:text-muted transition;
   }
 
   .img-hover-zoom {
@@ -45,11 +49,6 @@
   .btn-secondary {
     @apply px-5 py-2 text-lg border border-line rounded-lg bg-transparent text-cream
       hover:border-cream cursor-pointer;
-  }
-
-  .input-field {
-    @apply border border-line px-3 py-2 rounded-lg text-cream w-full
-      focus:outline-none focus:ring-0 focus:border-cream;
   }
 
   .social-icon {

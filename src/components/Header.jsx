@@ -29,7 +29,7 @@ const Header = ({ backLink }) => {
 
   return (
     <div className="sticky top-0 z-50 bg-surface">
-      <div className="mx-auto px-4 sm:px-6 lg:px-16 py-3 flex justify-between items-center text-cream">
+      <div className="container-x mx-auto py-3 flex justify-between items-center text-cream">
         <Link to="/#home" className="flex items-center gap-2">
           <img
             src={logo}
