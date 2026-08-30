@@ -6,7 +6,7 @@ import ImageViewer from "../components/ImageViewer";
 import { FaExpand } from "react-icons/fa6";
 import * as projectsService from "../services/projects";
 import useDocumentHead from "../hooks/useDocumentHead";
-import { BUSINESS_NAME } from "../utils/constants";
+import { BUSINESS_NAME, PROJECT_TABS } from "../utils/constants";
 
 const BACK_LINK = { to: "/#projects", label: "Projects" };
 
@@ -15,6 +15,12 @@ const ProjectPage = () => {
   const project = projectsService.projectsById[slug];
   const [openIndex, setOpenIndex] = useState(null);
   const [openDeliveredIndex, setOpenDeliveredIndex] = useState(null);
+  const [activeTab, setActiveTab] = useState(PROJECT_TABS.MOCKUPS);
+
+  const hasDelivered = Boolean(
+    project?.delivered &&
+      (project.delivered.images?.length > 0 || project.delivered.video)
+  );
 
   useEffect(() => {
     document.body.style.overflow =
@@ -68,53 +74,82 @@ const ProjectPage = () => {
           <p className="text-muted text-base md:text-lg">{project.desc}</p>
         </div>
 
-        <div className="max-w-3xl mx-auto flex flex-col gap-12">
-          {project.images.map((item, index) => (
-            <div key={index}>
+        {hasDelivered && (
+          <div className="flex justify-center pb-10">
+            <div className="relative flex w-64 rounded-full bg-surface-dark p-1">
+              <div
+                className="absolute top-1 bottom-1 left-1 rounded-full bg-accent transition-transform duration-300 ease-out"
+                style={{
+                  width: "calc(50% - 0.25rem)",
+                  transform:
+                    activeTab === PROJECT_TABS.DELIVERED
+                      ? "translateX(100%)"
+                      : "translateX(0)",
+                }}
+              />
               <button
                 type="button"
-                onClick={() => setOpenIndex(index)}
-                className="relative group overflow-hidden rounded-xl block w-full cursor-pointer"
+                onClick={() => setActiveTab(PROJECT_TABS.MOCKUPS)}
+                className={`tab-pill ${
+                  activeTab === PROJECT_TABS.MOCKUPS
+                    ? "text-surface"
+                    : "text-muted"
+                }`}
               >
-                <img
-                  src={item.img}
-                  alt={`${project.title} ${index + 1}`}
-                  title={project.title}
-                  loading="eager"
-                  fetchPriority={index === 0 ? "high" : "low"}
-                  decoding="async"
-                  width={item.width}
-                  height={item.height}
-                  className="w-full h-auto rounded-xl"
-                />
-                <span
-                  className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"
-                  aria-hidden="true"
-                >
-                  <FaExpand className="text-xs" />
-                </span>
+                Mock-ups
               </button>
-              <p className="text-muted text-sm pt-3 text-center">
-                {item.caption}
-              </p>
+              <button
+                type="button"
+                onClick={() => setActiveTab(PROJECT_TABS.DELIVERED)}
+                className={`tab-pill ${
+                  activeTab === PROJECT_TABS.DELIVERED
+                    ? "text-surface"
+                    : "text-muted"
+                }`}
+              >
+                Delivered
+              </button>
             </div>
-          ))}
-        </div>
+          </div>
+        )}
 
-        {project.delivered && (
-          <div className="max-w-3xl mx-auto mt-16">
-            <div className="text-center pb-10">
-              <h2 className="heading-section flex items-center justify-center gap-3">
-                As Delivered
-                <span className="bg-accent text-surface text-xs font-semibold px-2 py-1 rounded-md align-middle">
-                  DELIVERED
-                </span>
-              </h2>
-              <p className="text-muted text-base md:text-lg">
-                Real photos and videos from the finished space.
-              </p>
-            </div>
+        {(!hasDelivered || activeTab === PROJECT_TABS.MOCKUPS) && (
+          <div className="max-w-3xl mx-auto flex flex-col gap-12">
+            {project.images.map((item, index) => (
+              <div key={index}>
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(index)}
+                  className="relative group overflow-hidden rounded-xl block w-full cursor-pointer"
+                >
+                  <img
+                    src={item.img}
+                    alt={`${project.title} ${index + 1}`}
+                    title={project.title}
+                    loading="eager"
+                    fetchPriority={index === 0 ? "high" : "low"}
+                    decoding="async"
+                    width={item.width}
+                    height={item.height}
+                    className="w-full h-auto rounded-xl"
+                  />
+                  <span
+                    className="absolute top-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-black/30 text-cream"
+                    aria-hidden="true"
+                  >
+                    <FaExpand className="text-xs" />
+                  </span>
+                </button>
+                <p className="text-muted text-sm pt-3 text-center">
+                  {item.caption}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
 
+        {hasDelivered && activeTab === PROJECT_TABS.DELIVERED && (
+          <div className="max-w-3xl mx-auto">
             <div className="flex flex-col gap-12">
               {project.delivered.video && (
                 <div>

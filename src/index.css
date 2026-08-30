@@ -6,6 +6,7 @@
   --color-muted-hover: #a18955;
   --color-accent: #e09132;
   --color-surface: #424530;
+  --color-surface-dark: #2e3022;
   --color-line: #5b5e45;
 }
 
@@ -61,6 +62,10 @@
 
   .viewer-nav-btn {
     @apply absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center size-8 sm:size-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed;
+  }
+
+  .tab-pill {
+    @apply relative z-10 flex-1 px-5 py-2 rounded-full text-sm text-center transition-colors cursor-pointer;
   }
 }
 
