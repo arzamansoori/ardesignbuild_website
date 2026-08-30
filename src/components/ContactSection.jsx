@@ -1,8 +1,17 @@
+import { useState } from "react";
 import { FaPhone, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-import { MdEmail, MdLocationOn } from "react-icons/md";
+import { MdEmail, MdLocationOn, MdContentCopy, MdCheck } from "react-icons/md";
 import { PHONE_NUMBER, EMAIL, INSTAGRAM_URL, LINKEDIN_URL, WHATSAPP_LINK } from "../utils/constants";
 
 const ContactSection = () => {
+  const [copiedField, setCopiedField] = useState(null);
+
+  const handleCopy = (value, field) => {
+    navigator.clipboard.writeText(value);
+    setCopiedField(field);
+    setTimeout(() => setCopiedField(null), 1500);
+  };
+
   return (
     <div id="contact">
       <div className="section-top mb-20">
@@ -26,7 +35,17 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-cream">Phone</p>
-                  <p className="text-muted">{PHONE_NUMBER}</p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-muted">{PHONE_NUMBER}</p>
+                    <button
+                      type="button"
+                      onClick={() => handleCopy(PHONE_NUMBER, "phone")}
+                      className="text-muted hover:text-cream text-sm cursor-pointer"
+                      aria-label="Copy phone number"
+                    >
+                      {copiedField === "phone" ? <MdCheck /> : <MdContentCopy />}
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -37,7 +56,17 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-cream">Email</p>
-                  <p className="text-muted">{EMAIL}</p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-muted">{EMAIL}</p>
+                    <button
+                      type="button"
+                      onClick={() => handleCopy(EMAIL, "email")}
+                      className="text-muted hover:text-cream text-sm cursor-pointer"
+                      aria-label="Copy email address"
+                    >
+                      {copiedField === "email" ? <MdCheck /> : <MdContentCopy />}
+                    </button>
+                  </div>
                 </div>
               </div>
 
