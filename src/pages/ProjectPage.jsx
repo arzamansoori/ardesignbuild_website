@@ -37,8 +37,13 @@ const ProjectPage = () => {
       <Header backLink={BACK_LINK} />
       <div className="section-top px-8 pb-20">
         <div className="max-w-3xl mx-auto text-center pb-10">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-cream">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-cream flex items-center justify-center gap-3">
             {project.title}
+            {project.upcoming && (
+              <span className="bg-accent text-surface text-xs font-semibold px-2 py-1 rounded-md align-middle">
+                UPCOMING
+              </span>
+            )}
           </h1>
           <p className="text-muted text-base md:text-lg">
             {project.desc}

@@ -39,25 +39,6 @@ export const projects = [
     ],
   },
   {
-    id: "jewellery-store",
-    title: "Jewellery Store",
-    desc: "Boutique jewellery showroom pairing gold accents with a double-height, plant-filled entry.",
-    images: [
-      {
-        img: jewelleryEntryView,
-        caption: "Double-height entry lobby with trailing greenery, gold trim, and blue lounge seating.",
-      },
-      {
-        img: jewelleryWaitingArea,
-        caption: "Storefront lounge with patterned navy armchairs, a sofa, and portrait wall art.",
-      },
-      {
-        img: jewelleryDisplays,
-        caption: "Jewellery counter with glass display cases beneath an ornate patterned ceiling.",
-      },
-    ],
-  },
-  {
     id: "warm-modern-home",
     title: "Warm Modern Home",
     desc: "Full-home interior blending warm wood tones, brass accents, and soft floral textiles.",
@@ -131,6 +112,26 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "jewellery-store",
+    title: "Jewellery Store",
+    desc: "Boutique jewellery showroom pairing gold accents with a double-height, plant-filled entry.",
+    upcoming: true,
+    images: [
+      {
+        img: jewelleryEntryView,
+        caption: "Double-height entry lobby with trailing greenery, gold trim, and blue lounge seating.",
+      },
+      {
+        img: jewelleryWaitingArea,
+        caption: "Storefront lounge with patterned navy armchairs, a sofa, and portrait wall art.",
+      },
+      {
+        img: jewelleryDisplays,
+        caption: "Jewellery counter with glass display cases beneath an ornate patterned ceiling.",
+      },
+    ],
+  },
 ];
 
 export const projectsById = Object.fromEntries(projects.map((project) => [project.id, project]));
@@ -140,6 +141,7 @@ export const projectsSummary = projects.map((project) => ({
   img: project.images[0].img,
   title: project.title,
   desc: project.desc,
+  upcoming: project.upcoming,
 }));
 
 export default projects;

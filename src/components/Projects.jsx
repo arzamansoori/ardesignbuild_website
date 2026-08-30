@@ -29,8 +29,13 @@ const Projects = () => {
               title={item.title}
               className="w-full h-56 sm:h-60 img-hover-zoom"
             />
-            <h2 className="pt-3 pb-1 font-semibold text-lg text-cream">
+            <h2 className="pt-3 pb-1 font-semibold text-lg text-cream flex items-center gap-2">
               {item.title}
+              {item.upcoming && (
+                <span className="bg-accent text-surface text-xs font-semibold px-2 py-1 rounded-md">
+                  UPCOMING
+                </span>
+              )}
             </h2>
             <p className="text-muted text-sm">
               {item.desc}
