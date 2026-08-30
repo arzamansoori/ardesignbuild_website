@@ -25,7 +25,7 @@ const TopSection = () => {
           href="/ARStudioPortfolio.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          title="View Portfolio (PDF, 8.5MB)"
+          title="View Portfolio (PDF)"
           className="btn-secondary inline-flex items-center gap-2"
         >
           View Portfolio
