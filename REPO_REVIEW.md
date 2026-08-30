@@ -22,41 +22,13 @@ For what it is — a freelance marketing site with no backend, no auth, no data 
 
 ### Performance (the biggest engineering gap)
 
-- **Image weight is severe.** `src/assets/*` is 21MB uncompressed for 10 images — `DiningRoom.png` (3.4MB), `jewelleryshop.png` (3.5MB), `resortInteriors.png` (2.9MB), `LivingRoom.png` (2.2MB), etc. These are raw PNG/JPG exports, no compression pass, no WebP/AVIF, no responsive `srcset`, and Vite bundles them as-is. Every one of these ships as a single fixed-size asset regardless of viewport — a phone downloads the same 3.5MB file as a 4K desktop.
-- **No lazy loading** — every `<img>` across `Portfolio.jsx`, `Projects.jsx`, `ProjectPage.jsx` loads eagerly with no `loading="lazy"`, no `fetchpriority`, and nothing above-the-fold is prioritized differently from below-the-fold content. First-load payload for the homepage alone is likely 10MB+ of images before any user interaction.
-- **No explicit width/height on `<img>` tags** — every image relies on Tailwind classes for sizing but has no intrinsic dimensions set, so the browser can't reserve layout space, causing cumulative layout shift (CLS) as each image downloads in.
-- **Same source images reused across multiple "different" projects** (`constants.js`): `kitchen.png` appears in 3 different project galleries and the featured portfolio grid; `DiningRoom.png` appears in 4 places. This is a content problem more than a perf one (see PM section) but it compounds the weight issue — the same multi-MB file effectively gets "reused" as if it were cheap, when in reality each usage is a separate fetch (mitigated only by browser cache, not by build-time dedup/optimization).
 - **`public/ARStudioPortfolio.pdf` is 8.5MB** and is linked directly with `target="_blank"` from the primary CTA (`TopSection.jsx:16-23`) — the very first button visitors are likely to click downloads a 8.5MB file with zero indication of size, and no compression was attempted.
-- No image CDN, no `vite-imagetools`/`sharp` build step, no `next/image`-equivalent optimization pipeline at all. For a visual-design-portfolio site — where imagery *is* the product — this is the single highest-leverage fix available.
-
-### Accessibility
-
-- Hamburger menu button (`Header.jsx:57-62`) has no `aria-label` or `aria-expanded` — a plain "☰" character with no accessible name.
-- Modal (`ImageViewer.jsx`) has no `role="dialog"`, `aria-modal`, or focus trap — keyboard/screen-reader users can tab out of the open lightbox into the page behind it, and focus isn't moved into the dialog on open or restored on close.
-- No skip-to-content link; sticky header plus long single-page scroll makes keyboard navigation slow for every page load.
-- Color contrast should be spot-checked: `--color-muted: #A58E74` text on `--color-surface: #424530` background is a warm mid-tone on dark olive — worth running through a contrast checker (looks borderline for WCAG AA at small sizes).
-
-### SEO / discoverability
-
-- `index.html` has only a `<title>`, no `<meta name="description">`, no Open Graph/Twitter card tags, no canonical URL, no `robots.txt`, no `sitemap.xml`. For a local business site whose entire value is being found via search, this is a significant, easy-to-fix gap — right now a shared link to ardesignbuild.in gets zero preview card in iMessage/WhatsApp/Slack/LinkedIn.
-- No structured data (`LocalBusiness` JSON-LD) despite the site clearly being a local-business marketing page with an address and phone number already in the DOM — this is close to free SEO.
-- Individual project pages (`/project/:slug`) all share the same generic `<title>`/meta from `index.html` since there's no per-route head management (no `react-helmet` or Vite equivalent) — every project page looks identical to Google.
 
 ### Code quality / maintainability (minor, mostly nitpicks)
 
 - Inconsistent import style: some files use `../assets/x` relative imports with no path alias configured (fine at this size, but will not scale past ~20 components without becoming annoying).
-- Commented-out dead code left in place: `Portfolio.jsx:37-42` ("View Projects" button) and a stray duplicated comment in `Footer.jsx:11`. Small, but these should either be deleted or tracked as a TODO — dead code in version control long-term is a code smell, especially with no lint rule to flag it.
-- `ContactSection.jsx` builds an email body with a raw multi-line template literal containing unnecessary leading whitespace (`Hi AR Design & Build Studio,\n    \nProject Details:`) — the stray indentation will appear in the actual sent email body.
 - `package.json` still has default freelance-marketplace boilerplate (`license: "ISC"`, generic `repository`/`bugs`/`homepage` URLs pointing at a different GitHub user (`arzamansoori`) than the current git config) — cosmetic, but worth cleaning before treating this as a "real" project going forward.
 - `devDependencies` includes both `@tailwindcss/cli` and `@tailwindcss/vite` — the CLI package appears unused since Vite's own plugin handles compilation; dead dependency.
-- No `.env`/config separation for the destination email address, phone number, and social links — they're duplicated verbatim across `ContactSection.jsx` and `Footer.jsx` (email address, phone number both hardcoded twice). A single `constants.js` entry (which already exists for `BUSINESS_NAME`) would prevent drift.
-
-### What's already good (worth keeping)
-- Consistent, idiomatic function-component + hooks style throughout; no legacy class components or mixed patterns.
-- `ProjectGalleries`/`ProjectsDesc` derivation in `constants.js` (deriving the summary list from the detail map via `Object.entries(...).map(...)`) is a genuinely good single-source-of-truth pattern — avoids the two lists drifting apart.
-- `ImageViewer`'s scroll-snap carousel is a clever, dependency-free way to get swipeable full-screen image viewing without pulling in a carousel library.
-- Tailwind theme tokens (`@theme` block in `index.css`) are centralized and named semantically (`cream`, `muted`, `accent`, `surface`, `line`) rather than scattered hex values — good discipline for a design-heavy site.
-- Routing/back-link/`ScrollToHash` composition is a clean way to fake multi-page feel with anchor-based section nav plus real sub-routes for project detail pages.
 
 ---
 

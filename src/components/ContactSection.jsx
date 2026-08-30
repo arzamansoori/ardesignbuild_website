@@ -1,41 +1,8 @@
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { MdLocationOn } from "react-icons/md";
-import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
-import { useState } from "react";
-import { PHONE_NUMBER, EMAIL, INSTAGRAM_URL, LINKEDIN_URL, BUSINESS_NAME } from "../utils/constants";
+import { FaPhone, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { MdEmail, MdLocationOn } from "react-icons/md";
+import { PHONE_NUMBER, EMAIL, INSTAGRAM_URL, LINKEDIN_URL, WHATSAPP_LINK } from "../utils/constants";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    projectDetails: ""
-  })
-
-  const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value})
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const to = EMAIL
-    const subject = `New Project Inquiry from ${formData.name}`;
-    const body = `Hi ${BUSINESS_NAME} Studio,
-
-Project Details: ${formData.projectDetails}
-
-Thanks,
-${formData.name}`;
-
-      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-        to
-      )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-      window.open(gmailLink, "_blank");
-    };
-
   return (
     <div id="contact">
       <div className="section-top mb-20">
@@ -111,55 +78,21 @@ ${formData.name}`;
             </div>
           </div>
 
-          {/* Message form */}
-          <div className="border border-line rounded-xl p-6 w-96">
-            <h3 className="text-cream text-2xl font-semibold pb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="input-field"
-                  required
-                />
-              </div>
-
-              <div>
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email"
-                  className="input-field"
-                  required
-                />
-              </div>
-
-              <div>
-                <input
-                  type="text"
-                  id="projectDetails"
-                  name="projectDetails"
-                  value={formData.projectDetails}
-                  onChange={handleChange}
-                  placeholder="Tell us about your project..."
-                  className="input-field"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="px-2 py-2 bg-accent text-surface font-medium rounded-lg cursor-pointer">
-                  Send Message
-              </button>
-            </form>
+          {/* WhatsApp CTA */}
+          <div className="border border-line rounded-xl p-6 w-96 flex flex-col items-center text-center gap-6">
+            <h3 className="text-cream text-2xl font-semibold">Send a Message</h3>
+            <p className="text-muted">
+              Chat with us directly on WhatsApp and let's discuss your project.
+            </p>
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full px-2 py-3 bg-accent text-surface font-medium rounded-lg cursor-pointer"
+            >
+              <FaWhatsapp className="text-xl" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
 
