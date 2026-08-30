@@ -1,7 +1,7 @@
 import { AiOutlineCopyright } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-import { BUSINESS_NAME } from "../utils/constants";
+import { BUSINESS_NAME, PHONE_NUMBER, EMAIL } from "../utils/constants";
 import logo from "../assets/logo.png"
 
 const Footer = () => {
@@ -49,8 +49,8 @@ const Footer = () => {
         <div>
           <h3 className="text-cream font-semibold text-md pb-2">Contact</h3>
           <ul className="text-muted flex flex-col gap-2 text-sm flex-wrap">
-            <li>+91-9036925738</li>
-            <li>ardesignbuild03@gmail.com</li>
+            <li>{PHONE_NUMBER}</li>
+            <li>{EMAIL}</li>
             <li>Brindavan Colony, <br/> Toli Chowki, Hyderabad
             </li>
           </ul>

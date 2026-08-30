@@ -4,6 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
+import { PHONE_NUMBER, EMAIL, INSTAGRAM_URL, BUSINESS_NAME } from "../utils/constants";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -19,12 +20,12 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const to = "ardesignbuild03@gmail.com"
+    const to = EMAIL
     const subject = `New Project Inquiry from ${formData.name}`;
-    const body = `Hi AR Design & Build Studio,
-    
+    const body = `Hi ${BUSINESS_NAME} Studio,
+
 Project Details: ${formData.projectDetails}
-      
+
 Thanks,
 ${formData.name}`;
 
@@ -58,7 +59,7 @@ ${formData.name}`;
                 </div>
                 <div>
                   <p className="text-cream">Phone</p>
-                  <p className="text-muted">+91-9036925738</p>
+                  <p className="text-muted">{PHONE_NUMBER}</p>
                 </div>
               </div>
 
@@ -69,7 +70,7 @@ ${formData.name}`;
                 </div>
                 <div>
                   <p className="text-cream">Email</p>
-                  <p className="text-muted">ardesignbuild03@gmail.com</p>
+                  <p className="text-muted">{EMAIL}</p>
                 </div>
               </div>
 
@@ -90,7 +91,7 @@ ${formData.name}`;
               <p className="text-cream font-semibold text-lg pb-4">Follow us</p>
               <div className="flex gap-3">
                 <a
-                  href= "https://www.instagram.com/ardesign_build03/"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"
