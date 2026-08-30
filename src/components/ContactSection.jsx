@@ -21,7 +21,7 @@ const ContactSection = () => {
           <p className="text-lg text-muted mx-3">Ready to transform your space? Let's discuss your vision</p>
         </div>
 
-        <div className="mt-10 flex lg:gap-40 gap-10 justify-center flex-wrap-reverse mx-4">
+        <div className="mt-10 flex lg:gap-40 gap-10 justify-center items-end flex-wrap-reverse mx-4">
 
           {/* Contact Information */}
           <div className="">
