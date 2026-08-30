@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa6";
 
 const TopSection = () => {
   return (
@@ -12,22 +13,24 @@ const TopSection = () => {
         personality and lifestyle. Every space tells a story - let us help you write yours.
       </p>
 
-      <div className="">
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        <Link
+          to="/#contact"
+          className="btn-primary"
+        >
+          Get Consultation
+        </Link>
+
         <a
           href="/ARStudioPortfolio.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary mr-6"
+          title="View Portfolio (PDF, 8.5MB)"
+          className="btn-secondary inline-flex items-center gap-2"
         >
           View Portfolio
+          <FaDownload className="text-sm" />
         </a>
-
-        <Link
-          to="/#contact"
-          className="btn-primary inline-block"
-        >
-          Get Consultation
-        </Link>
       </div>
     </div>
   )

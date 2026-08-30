@@ -42,6 +42,11 @@
       hover:bg-surface hover:text-cream font-semibold cursor-pointer;
   }
 
+  .btn-secondary {
+    @apply px-5 py-2 text-lg border border-line rounded-lg bg-transparent text-cream
+      hover:border-cream font-semibold cursor-pointer;
+  }
+
   .input-field {
     @apply border border-line px-3 py-2 rounded-lg text-cream w-full
       focus:outline-none focus:ring-0 focus:border-cream;
