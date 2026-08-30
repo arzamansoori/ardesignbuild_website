@@ -54,6 +54,10 @@
   .social-icon {
     @apply p-3 rounded-full bg-accent cursor-pointer inline-flex items-center justify-center;
   }
+
+  .viewer-nav-btn {
+    @apply absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center size-8 sm:size-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed;
+  }
 }
 
 @layer utilities {

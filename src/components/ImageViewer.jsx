@@ -72,7 +72,7 @@ const ImageViewer = ({ images, index, onClose }) => {
             e.stopPropagation();
             scrollToIndex(activeIndex - 1);
           }}
-          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-black/40"
+          className="viewer-nav-btn left-2 sm:left-6"
           aria-label="Previous image"
         >
           <FaChevronLeft />
@@ -87,7 +87,7 @@ const ImageViewer = ({ images, index, onClose }) => {
             e.stopPropagation();
             scrollToIndex(activeIndex + 1);
           }}
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/60 text-cream text-base sm:text-lg cursor-pointer transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-black/40"
+          className="viewer-nav-btn right-2 sm:right-6"
           aria-label="Next image"
         >
           <FaChevronRight />

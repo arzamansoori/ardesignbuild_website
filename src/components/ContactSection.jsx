@@ -138,7 +138,7 @@ const ContactSection = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full px-2 py-3 bg-accent text-surface font-medium rounded-lg cursor-pointer"
+              className="btn-primary w-full inline-flex items-center justify-center gap-2"
             >
               <FaWhatsapp className="text-xl" />
               Chat on WhatsApp
