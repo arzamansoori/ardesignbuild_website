@@ -2,6 +2,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 import { BUSINESS_NAME, PHONE_NUMBER, EMAIL } from "../utils/constants";
+import { getCurrentYear } from "../utils/date";
 import logo from "../assets/logo.png"
 
 const Footer = () => {
@@ -64,7 +65,7 @@ const Footer = () => {
     {/* copyright */}
     <div className="flex items-center gap-1 justify-center text-muted pb-10 pt-5">
       <span><AiOutlineCopyright /></span>
-      <p className="text-sm flex flex-wrap">2026 {BUSINESS_NAME}. All rights reserved.</p>
+      <p className="text-sm flex flex-wrap">{getCurrentYear()} {BUSINESS_NAME}. All rights reserved.</p>
     </div>
     </div>
   )

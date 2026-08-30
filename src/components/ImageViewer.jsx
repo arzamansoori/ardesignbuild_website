@@ -7,9 +7,19 @@ const ImageViewer = ({ images, index, onClose }) => {
 
   useEffect(() => {
     const el = containerRef.current;
-    if (el) {
+    if (!el) return;
+
+    let frame;
+    const scrollToInitial = () => {
+      if (el.clientWidth === 0) {
+        frame = requestAnimationFrame(scrollToInitial);
+        return;
+      }
       el.scrollTo({ left: el.clientWidth * index, behavior: "auto" });
-    }
+    };
+    scrollToInitial();
+
+    return () => cancelAnimationFrame(frame);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
