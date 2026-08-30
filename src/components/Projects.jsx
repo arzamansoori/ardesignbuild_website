@@ -6,9 +6,7 @@ const Projects = () => {
   return (
     <div className="section-top px-8" id="projects">
       <div className="text-center pb-10 max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cream">
-          Our Projects
-        </h2>
+        <h2 className="heading-section">Our Projects</h2>
         <p className="text-muted text-base md:text-lg">
           A look at some of our recent design and build projects, delivered with
           care from concept to completion.

@@ -22,9 +22,7 @@ const ContactSection = () => {
     <div id="contact">
       <div className="section-top mb-20">
         <div className="text-center">
-          <h1 className="pb-2 text-4xl font-semibold text-cream">
-            Get In Touch
-          </h1>
+          <h1 className="heading-section">Get In Touch</h1>
           <p className="text-lg text-muted mx-3">
             Ready to transform your space? Let's discuss your vision
           </p>

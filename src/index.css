@@ -25,6 +25,10 @@
     @apply pt-25 md:pt-32;
   }
 
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-cream;
+  }
+
   .nav-link {
     @apply hover:text-muted transition;
   }

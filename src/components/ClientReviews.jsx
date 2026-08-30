@@ -5,9 +5,7 @@ const ClientReviews = () => {
   return (
     <div className="section-top" id="reviews">
       <div className="text-center">
-        <h1 className="text-4xl font-semibold pb-3 text-cream">
-          Client Reviews
-        </h1>
+        <h1 className="heading-section">Client Reviews</h1>
         <p className="text-muted text-lg mx-4">
           What our clients say about their experience with us
         </p>

@@ -29,9 +29,7 @@ const Gallery = () => {
   return (
     <div className="section-top px-8" id="gallery">
       <div className="text-center pb-10 max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cream">
-          Gallery
-        </h2>
+        <h2 className="heading-section">Gallery</h2>
         <p className="text-muted text-base md:text-lg">
           A glimpse into the spaces we've designed and built.
         </p>
