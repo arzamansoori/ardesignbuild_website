@@ -27,7 +27,7 @@ const Home = () => {
       <ContactSection />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

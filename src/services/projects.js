@@ -32,55 +32,64 @@ export const projects = [
         img: homeBedroom1,
         width: 1600,
         height: 1600,
-        caption: "Primary bedroom with a tufted brown headboard and a floral-cushioned window seat.",
+        caption:
+          "Primary bedroom with a tufted brown headboard and a floral-cushioned window seat.",
       },
       {
         img: homeBedroom2,
         width: 1600,
         height: 1600,
-        caption: "Second bedroom pairs a navy headboard with soft blue floral wall art.",
+        caption:
+          "Second bedroom pairs a navy headboard with soft blue floral wall art.",
       },
       {
         img: homeBedroom2Dressing,
         width: 1600,
         height: 1600,
-        caption: "Same bedroom viewed toward the dressing mirror and floral wallpaper panel.",
+        caption:
+          "Same bedroom viewed toward the dressing mirror and floral wallpaper panel.",
       },
       {
         img: homeTvRoom,
         width: 1600,
         height: 1600,
-        caption: "Living room with a wood-paneled TV wall and a sculptural globe chandelier.",
+        caption:
+          "Living room with a wood-paneled TV wall and a sculptural globe chandelier.",
       },
       {
         img: homePrayerRoom,
         width: 1600,
         height: 1600,
-        caption: "Open dining and kitchen area with a built-in mandir display nook.",
+        caption:
+          "Open dining and kitchen area with a built-in mandir display nook.",
       },
       {
         img: homePassage,
         width: 1600,
         height: 1600,
-        caption: "Passage lined with display shelving and a cozy orange window seat.",
+        caption:
+          "Passage lined with display shelving and a cozy orange window seat.",
       },
       {
         img: homePantry,
         width: 1600,
         height: 1600,
-        caption: "Kitchen pantry corner with a glass display cabinet beside the fridge.",
+        caption:
+          "Kitchen pantry corner with a glass display cabinet beside the fridge.",
       },
       {
         img: homeSofa,
         width: 1600,
         height: 1600,
-        caption: "Sitting room anchored by a rust-orange sectional sofa and coastal wall art.",
+        caption:
+          "Sitting room anchored by a rust-orange sectional sofa and coastal wall art.",
       },
       {
         img: homeIndoorSwing,
         width: 1500,
         height: 1500,
-        caption: "Hallway featuring a hanging swing bench overlooking the open living room.",
+        caption:
+          "Hallway featuring a hanging swing bench overlooking the open living room.",
       },
     ],
   },
@@ -93,37 +102,43 @@ export const projects = [
         img: clinicReception,
         width: 2500,
         height: 2500,
-        caption: "Clinic reception desk beneath the Urocare Kidney Center signage wall.",
+        caption:
+          "Clinic reception desk beneath the Urocare Kidney Center signage wall.",
       },
       {
         img: clinicPharmacy,
         width: 2500,
         height: 2500,
-        caption: "Reception desk opens onto a fully stocked in-house pharmacy counter.",
+        caption:
+          "Reception desk opens onto a fully stocked in-house pharmacy counter.",
       },
       {
         img: clinicWaitingArea,
         width: 2500,
         height: 2500,
-        caption: "Glass-walled waiting lounge with a navy sofa and magazine rack.",
+        caption:
+          "Glass-walled waiting lounge with a navy sofa and magazine rack.",
       },
       {
         img: clinicDoctorOffice1,
         width: 2500,
         height: 2500,
-        caption: "Doctor's glass-walled office with floral wallpaper shelving and a horse figurine.",
+        caption:
+          "Doctor's glass-walled office with floral wallpaper shelving and a horse figurine.",
       },
       {
         img: clinicDoctorOffice2,
         width: 2500,
         height: 2500,
-        caption: "Exam corner with a washbasin and motivational wall art nearby.",
+        caption:
+          "Exam corner with a washbasin and motivational wall art nearby.",
       },
       {
         img: clinicDoctorOffice3,
         width: 2500,
         height: 2500,
-        caption: "Consultation desk framed by certificates and floral wallpaper shelving.",
+        caption:
+          "Consultation desk framed by certificates and floral wallpaper shelving.",
       },
     ],
   },
@@ -136,13 +151,15 @@ export const projects = [
         img: diningView1,
         width: 1500,
         height: 1500,
-        caption: "Marble dining table under a floral chandelier, framed by a forest mural.",
+        caption:
+          "Marble dining table under a floral chandelier, framed by a forest mural.",
       },
       {
         img: diningView2,
         width: 1500,
         height: 1500,
-        caption: "A closer view highlights the horse painting and glass display shelving nearby.",
+        caption:
+          "A closer view highlights the horse painting and glass display shelving nearby.",
       },
     ],
   },
@@ -156,25 +173,30 @@ export const projects = [
         img: jewelleryEntryView,
         width: 1440,
         height: 1600,
-        caption: "Double-height entry lobby with trailing greenery, gold trim, and blue lounge seating.",
+        caption:
+          "Double-height entry lobby with trailing greenery, gold trim, and blue lounge seating.",
       },
       {
         img: jewelleryWaitingArea,
         width: 1440,
         height: 1600,
-        caption: "Storefront lounge with patterned navy armchairs, a sofa, and portrait wall art.",
+        caption:
+          "Storefront lounge with patterned navy armchairs, a sofa, and portrait wall art.",
       },
       {
         img: jewelleryDisplays,
         width: 1440,
         height: 1600,
-        caption: "Jewellery counter with glass display cases beneath an ornate patterned ceiling.",
+        caption:
+          "Jewellery counter with glass display cases beneath an ornate patterned ceiling.",
       },
     ],
   },
 ];
 
-export const projectsById = Object.fromEntries(projects.map((project) => [project.id, project]));
+export const projectsById = Object.fromEntries(
+  projects.map((project) => [project.id, project])
+);
 
 export const projectsSummary = projects.map((project) => ({
   slug: project.id,

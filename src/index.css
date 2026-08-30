@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FFEFCD;
-  --color-muted: #A58E74;
+  --color-cream: #ffefcd;
+  --color-muted: #a58e74;
   --color-muted-hover: #a18955;
-  --color-accent: #E09132;
+  --color-accent: #e09132;
   --color-surface: #424530;
   --color-line: #5b5e45;
 }
@@ -12,7 +12,7 @@
 @layer base {
   body {
     @apply bg-surface;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 }
 

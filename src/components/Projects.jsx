@@ -1,23 +1,21 @@
 import { Link } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
-import * as projectsService from "../services/projects"
+import * as projectsService from "../services/projects";
 
 const Projects = () => {
   return (
     <div className="section-top px-8" id="projects">
-
       <div className="text-center pb-10 max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cream">
           Our Projects
         </h2>
         <p className="text-muted text-base md:text-lg">
-          A look at some of our recent design and build projects, delivered
-          with care from concept to completion.
+          A look at some of our recent design and build projects, delivered with
+          care from concept to completion.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
         {projectsService.projectsSummary.map((item, index) => (
           <Link
             key={index}
@@ -41,18 +39,15 @@ const Projects = () => {
                 </span>
               )}
             </h2>
-            <p className="text-muted text-sm">
-              {item.desc}
-            </p>
+            <p className="text-muted text-sm">{item.desc}</p>
             <p className="text-accent text-sm font-semibold pt-2 flex items-center gap-1.5">
               View Project <FaChevronRight className="text-xs" />
             </p>
           </Link>
         ))}
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

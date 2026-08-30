@@ -33,9 +33,8 @@ async function run() {
     const tempPath = `${outputPath}.tmp`;
     const image = sharp(inputPath).rotate();
     const metadata = await image.metadata();
-    const resized = metadata.width > MAX_WIDTH
-      ? image.resize({ width: MAX_WIDTH })
-      : image;
+    const resized =
+      metadata.width > MAX_WIDTH ? image.resize({ width: MAX_WIDTH }) : image;
 
     await resized.jpeg({ quality: 80, mozjpeg: true }).toFile(tempPath);
     renameSync(tempPath, outputPath);

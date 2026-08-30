@@ -22,8 +22,12 @@ const ProjectPage = () => {
   }, [openIndex]);
 
   useDocumentHead({
-    title: project ? `${project.title} | ${BUSINESS_NAME}` : `Project not found | ${BUSINESS_NAME}`,
-    description: project ? project.desc : "We couldn't find the project you're looking for.",
+    title: project
+      ? `${project.title} | ${BUSINESS_NAME}`
+      : `Project not found | ${BUSINESS_NAME}`,
+    description: project
+      ? project.desc
+      : "We couldn't find the project you're looking for.",
     path: `/project/${slug}`,
     noindex: !project,
   });
@@ -33,8 +37,12 @@ const ProjectPage = () => {
       <div>
         <Header backLink={BACK_LINK} />
         <div className="section-top px-8 pb-20 text-center">
-          <h1 className="text-3xl font-bold text-cream mb-4">Project not found</h1>
-          <p className="text-muted mb-8">We couldn't find the project you're looking for.</p>
+          <h1 className="text-3xl font-bold text-cream mb-4">
+            Project not found
+          </h1>
+          <p className="text-muted mb-8">
+            We couldn't find the project you're looking for.
+          </p>
         </div>
         <Footer />
       </div>
@@ -54,9 +62,7 @@ const ProjectPage = () => {
               </span>
             )}
           </h1>
-          <p className="text-muted text-base md:text-lg">
-            {project.desc}
-          </p>
+          <p className="text-muted text-base md:text-lg">{project.desc}</p>
         </div>
 
         <div className="max-w-3xl mx-auto flex flex-col gap-12">

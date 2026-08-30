@@ -7,6 +7,7 @@ Scope: full repo at commit `1b70f2f` (branch `dev`), re-reviewed after a round o
 ## Part 1 — As an L7 Engineer
 
 ### Overall take
+
 Most of the issues flagged in the original review are fixed. The contact-form bug (the single biggest problem in the repo) is gone — replaced with a WhatsApp-first flow plus one-click copy for phone/email, so there's no more browser/email-client dependency. SEO metadata, a sitemap, an error boundary, a 404 page, and lazy-loaded images are all now in place. What's left is the same category of gap as before: no automated quality gates (tests, lint, CI) and some leftover project-metadata cruft. Nothing urgent remains.
 
 ### Fixed since last review
@@ -33,6 +34,7 @@ Most of the issues flagged in the original review are fixed. The contact-form bu
 ## Part 2 — As a Product Manager
 
 ### What this site is for
+
 Unchanged: a single freelance interior-design/build studio (Hyderabad, India) using the site as a digital portfolio + lead-gen funnel — show work → build trust (reviews) → capture contact.
 
 ### Fixed since last review
@@ -54,6 +56,7 @@ Unchanged: a single freelance interior-design/build studio (Hyderabad, India) us
 - **The WhatsApp flow still depends on the visitor completing an outbound step** (tapping "send" in WhatsApp) rather than a native on-site form submission — a smaller version of the old friction, but not eliminated. Reasonable tradeoff for a business already using WhatsApp as its default channel; flag only if conversion data (once analytics exists) shows drop-off there.
 
 ### Prioritized recommendation (if only doing 3 things)
+
 1. Stand up basic analytics (GA4/Plausible) — now that the lead-capture flow is actually fixed, the business has no way to know if it's working or where visitors drop off.
 2. Add lint + a minimal CI check (even just `vite build` on PR) — the codebase has grown past the point where style/build breakage is caught by inspection alone.
 3. Add scope/timeline/budget detail to project case studies — the biggest remaining gap between "photo gallery" and "proof of work that helps a homeowner self-qualify."

@@ -20,7 +20,8 @@ const GalleryPage = () => {
 
   useDocumentHead({
     title: `Gallery | ${BUSINESS_NAME}`,
-    description: "Browse our full gallery of interior design and build projects.",
+    description:
+      "Browse our full gallery of interior design and build projects.",
     path: "/gallery",
   });
 

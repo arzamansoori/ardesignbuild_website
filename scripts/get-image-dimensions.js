@@ -26,7 +26,9 @@ async function run() {
 
   for (const file of files) {
     const { width, height } = await sharp(file).metadata();
-    console.log(`${path.relative(projectsDir, file)}: width: ${width}, height: ${height}`);
+    console.log(
+      `${path.relative(projectsDir, file)}: width: ${width}, height: ${height}`
+    );
   }
 }
 
