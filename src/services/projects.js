@@ -24,23 +24,8 @@ import clinicDoctorOffice3 from "../assets/projects/clinic/06-doctor-office.jpg"
 
 export const projects = [
   {
-    id: "dining-area",
-    title: "Dining Area",
-    desc: "Elegant dining room centered on a marble table beneath a statement floral chandelier.",
-    images: [
-      {
-        img: diningView1,
-        caption: "Marble dining table under a floral chandelier, framed by a forest mural.",
-      },
-      {
-        img: diningView2,
-        caption: "A closer view highlights the horse painting and glass display shelving nearby.",
-      },
-    ],
-  },
-  {
     id: "warm-modern-home",
-    title: "Warm Modern Home",
+    title: "A Warm & Modern Home",
     desc: "Full-home interior blending warm wood tones, brass accents, and soft floral textiles.",
     images: [
       {
@@ -109,6 +94,21 @@ export const projects = [
       {
         img: clinicDoctorOffice3,
         caption: "Consultation desk framed by certificates and floral wallpaper shelving.",
+      },
+    ],
+  },
+  {
+    id: "dining-area",
+    title: "Dining Area",
+    desc: "Elegant dining room centered on a marble table beneath a statement floral chandelier.",
+    images: [
+      {
+        img: diningView1,
+        caption: "Marble dining table under a floral chandelier, framed by a forest mural.",
+      },
+      {
+        img: diningView2,
+        caption: "A closer view highlights the horse painting and glass display shelving nearby.",
       },
     ],
   },
